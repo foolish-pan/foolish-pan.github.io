@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<meta  lang="zh-CN" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#fff" id="theme-color">
+  <link rel="icon" href="/images/005.png">
+  <title>攀叔的万事屋</title>
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      return setting;
+    };
+    // apply current darkmode setting
+    var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      if(setting === getCssMediaQuery()) {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else if(reverseDarkList[setting]) {
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+      }
+    };
+    setDarkmode();
+  </script>
+  <script>
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  </script>
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  
+  <link rel="preload" href="//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js" as="script">
+  
+  
+  <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  <div class="wrapper">
+    
+    <nav class="navbar">
+  <div class="navbar-logo">
+    <span class="navbar-logo-main">
+      
+      <img class="navbar-logo-img" src="/images/005.png">
+      
+      <span class="navbar-logo-dsc">攀叔的万事屋</span>
+    </span>
+  </div>
+  <div class="navbar-menu">
+    
+    <a href="/" class="navbar-menu-item">首页 </a>
+    
+    <a href="/archives" class="navbar-menu-item">归档 </a>
+    
+    <a href="/tags" class="navbar-menu-item">标签 </a>
+    
+    <a href="/categories" class="navbar-menu-item">分类 </a>
+    
+    <a href="/about" class="navbar-menu-item">关于 </a>
+    
+    <a href="/links" class="navbar-menu-item">友链 </a>
+    
+    <a class="navbar-menu-item darknavbar" id="dark"><i class="iconfont icon-weather"></i></a>
+  </div>
+</nav>
+    
+    <div class="section-wrap">
+      <div class="container">
+        <div class="columns">
+          <main class="main-column">
+<div class="image-wrapper">
+  <img src="/images/破晓传说/70e2b286ly1gpyekbxr9lj20xc0hi7ir.jpg" data-src="/images/破晓传说/70e2b286ly1gpyekbxr9lj20xc0hi7ir.jpg"
+    srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+    class="image lozad">
+</div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      破晓传说 PC版通关评测
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2021-09-23T00:00:00.000Z" style="display: flex; align-items: center;">
+      <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+      <span>2021-09-23</span>
+    </time>
+    
+    <span class="dot"></span>
+    
+    <a href="/categories/游戏/" class="post-meta-link">游戏</a>
+    
+    
+    
+    <span class="dot"></span>
+    <span>1.3k 字</span>
+    
+  </div>
+  
+  <div class="post-meta post-show-meta" style="margin-top: -10px;">
+    <div style="display: flex; align-items: center;">
+      <i class="iconfont icon-biaoqian" style="margin-right: 2px; font-size: 1.15rem;"></i>
+      
+      
+        <a href="/tags/评测/" class="post-meta-link">评测</a>
+      
+      
+      <span class="dot"></span>
+      
+        <a href="/tags/PC/" class="post-meta-link">PC</a>
+      
+      
+      <span class="dot"></span>
+      
+        <a href="/tags/传说系列/" class="post-meta-link">传说系列</a>
+      
+    </div>
+  </div>
+  
+  </header>
+  <div id="section" class="post-content">
+    <p>1、普通难度，一周目通关，支线未全清，隐藏迷宫已打<br>2、战斗系统还是有传说系列的味道的，但是和之前相比简化了许多<br>3、以前的防御机制现在换成了闪避，有极限闪避判定，极限闪避成功有各种加成<br>4、主角团每个人对应一种增幅攻击，对应一种类型的敌人，比如女主的枪可以击坠飞行的敌人，盾姐可以挡住正在冲锋的敌人等<br>5、强烈吐槽！闪避只能取消普攻，无法取消技能，这导致一些连招比较长的技能因为容易挨打直接冷板凳<br>6、新引入了CP系统，所有回复的技能都需要消耗CP，一些场景技能也会消耗，全队共用，睡觉回满，战斗中可以使用道具回复，目测会跟着主角团的等级提升上限，击败巨型敌人也会有提升上限的道具<br>7、技能发部分都是来自两种习得方式，一种是使用技能点习得，一种是熟练度习得，每个角色对应三种熟练度，对应角色的三种战斗机制<br>8、每个角色的技能习得均来自称号，每个称号对应五个技能，随着进度的推进，会展示部分称号的获得方式<br>9、战斗整体割裂感比较强，普通小怪随便打，碰到精英怪和Boss就是刮痧，而且精英怪和Boss还有强霸体，平常的连招都打不起来，后期还有各种守门守宝箱的精英怪，都是绕不过去的，打的多了容易感觉累<br>10、普通难度下，个人感觉难点主要在于精英怪的Combo，在最终迷宫曾经一场精英怪战斗耗空CP·····<br>11、甚至感觉最终Boss都不如精英怪难·····</p>
+<p>12、战斗不掉落金币，只会掉落素材，人型敌人大部分会掉落换金道具<br>13、商店里只卖防具和消耗品，武器除了剧情送的，只能通过使用怪物掉落的素材制作<br>14、因为金币不掉落，来源就很有限，主要靠支线奖励，开宝箱，如果不清支线，金币会非常吃紧<br>15、消耗品卖的巨贵，最基础回血要都要1k·····整个通关过程回復基本靠捡·····<br>16、最强防具都在通关后的隐藏支线迷宫，隐藏迷宫还能拿到成长武器，根据角色的怪物击杀数成长，分开计算，只有本人击杀才算，队友击杀是不算的·····理论可以刷到9999攻击</p>
+<p>17、主角团人设都比较讨喜，每个角色也都有自己独特的个性，简单介绍<br>    主角，钢铁直男，武器控，主要使用武技输出，增幅技能为让敌人强制倒地<br>    女主，傲娇，巨能吃（料理技能是消耗双倍食材延长Buff时间），队伍主奶，增幅技能是击坠空中敌人<br>    法师妹妹，知识丰富，熟知历史，喜欢甜食，自带游戏中的萌物猫头鹰，暴力法术输出，增幅技能是抢夺敌人正在吟唱的法术并封印敌人吟唱一段时间<br>    武斗小伙，比男主还钢的直男，说话不过大脑，可以爆气，存活能力较差····增幅技能是破坏重型敌人的护盾<br>    盾姐，操碎了心的老妈，各种做饭缝补衣服打理队伍物资，钓鱼达人，队伍主T，唯一一个保留了防御动作的角色，增幅技能是阻挡敌人冲锋<br>    黑皮小哥，贵族音乐家，生活基本不能自理，古物狂魔，全能型，武技法术恢复样样都会，增幅技能是取消高速敌人的闪避<br>18、剧情防止剧透，只说感想：能感觉到剧情是想搞点惊喜和展开的，但是做的不太够，后期剧情有些有点强行<br>19、历代都有的小剧场改了，不再是大头照+表情，而是很像动态漫画的形式</p>
+<p>20、DLC，最想吐槽的部分，能明显的感觉到骗钱的气息···<br>21、个人在中期开启了+20%经验的DLC，见怪就打，才能勉强维持不被Boss压等级的程度<br>22、外观DLC带有称号，在这一作，等同于DLC专用技能，而且这些技能还加成很明显</p>
+<p>总结：<br>能感觉到系列的进步和寻求突破，但是就这一作来说，有些东西没搞像<br>游戏总体素质还是可以的，战斗也比较爽快，算是比较适合新人入坑传说系列<br>DLC真的是一大败笔，过于影响平衡，当然这只是一家之言，也许会有不少人喜欢这种氪金就能变强的感觉<br>个人打分：75</p>
+
+  </div>
+  <div>
+  
+  <div class="post-note note-warning copyright" style="margin-top: 42px">
+    <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="https://foolish-pan.github.io/about">Foolish攀</a></p>
+    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="https://foolish-pan.github.io/posts/14878/">https://foolish-pan.github.io/posts/14878/</a></p>
+    <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！</p>
+  </div>
+  
+  </div>
+</article>
+<div class="nav">
+  
+  <div class="nav-item-prev">
+    <a href="/posts/18417/" class="nav-link">
+      <i class="iconfont icon-left nav-prev-icon"></i>
+      <div>
+        <div class="nav-label">上一篇</div>
+        
+        <div class="nav-title">瓦里奥制造：分享同乐，偷跑评测 </div>
+        
+      </div>
+    </a>
+  </div>
+  
+  
+  <div class="nav-item-next">
+    <a href="/posts/34598/" class="nav-link">
+      <div>
+        <div class="nav-label">下一篇</div>
+        
+        <div class="nav-title">终结的莉莉丝：不死骑士的救赎 真结局通关+全收集评测 </div>
+        
+      </div>
+      <i class="iconfont icon-right nav-next-icon"></i>
+    </a>
+  </div>
+  
+</div>
+
+<div class="card card-content toc-card" id="mobiletoc">
+  <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+
+</div></main>
+          <aside class="left-column">
+            
+            <div class="card card-author">
+              
+<img src="/images/003.gif" class="author-img">
+
+<p class="author-name">Foolish攀</p>
+<p class="author-description">靠谱的中年技术宅男</p>
+<div class="author-message">
+  <a class="author-posts-count" href="/archives">
+    <span>22</span>
+    <span>文章</span>
+  </a>
+  <a class="author-categories-count" href="/categories">
+    <span>1</span>
+    <span>分类</span>
+  </a>
+  <a class="author-tags-count" href="/tags">
+    <span>21</span>
+    <span>标签</span>
+  </a>
+</div>
+
+            </div>
+            
+            <div class="sticky-tablet">
+  
+  
+  <article class="display-when-two-columns spacer">
+    <div class="card card-content toc-card">
+      <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+
+    </div>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="categories-card">
+  <div class="categories-header"><i class="iconfont icon-fenlei" style="padding-right: 2px;"></i>分类</div>
+  <div class="categories-list">
+    
+      <a href="/categories/游戏">
+        <div class="categories-list-item">
+          游戏
+          <span class="categories-list-item-badge">22</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content">
+    <div class="tags-card">
+  <div class="tags-header"><i class="iconfont icon-biaoqian" style="padding-right: 2px;"></i>热门标签</div>
+  <div class="tags-list">
+    
+    <a href="\tags\评测" title="评测"><div class="tags-list-item">评测</div></a>
+    
+    <a href="\tags\Switch" title="Switch"><div class="tags-list-item">Switch</div></a>
+    
+    <a href="\tags\PC" title="PC"><div class="tags-list-item">PC</div></a>
+    
+    <a href="\tags\银河城" title="银河城"><div class="tags-list-item">银河城</div></a>
+    
+    <a href="\tags\马里奥" title="马里奥"><div class="tags-list-item">马里奥</div></a>
+    
+    <a href="\tags\黑神话" title="黑神话"><div class="tags-list-item">黑神话</div></a>
+    
+    <a href="\tags\国产" title="国产"><div class="tags-list-item">国产</div></a>
+    
+    <a href="\tags\像素" title="像素"><div class="tags-list-item">像素</div></a>
+    
+    <a href="\tags\传说系列" title="传说系列"><div class="tags-list-item">传说系列</div></a>
+    
+    <a href="\tags\聚会" title="聚会"><div class="tags-list-item">聚会</div></a>
+    
+    <a href="\tags\火纹" title="火纹"><div class="tags-list-item">火纹</div></a>
+    
+    <a href="\tags\无双" title="无双"><div class="tags-list-item">无双</div></a>
+    
+    <a href="\tags\塞尔达" title="塞尔达"><div class="tags-list-item">塞尔达</div></a>
+    
+    <a href="\tags\卡比" title="卡比"><div class="tags-list-item">卡比</div></a>
+    
+    <a href="\tags\战神" title="战神"><div class="tags-list-item">战神</div></a>
+    
+    <a href="\tags\PS4" title="PS4"><div class="tags-list-item">PS4</div></a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+          <aside class="right-column">
+            <div class="sticky-widescreen">
+  
+  
+  <article class="card card-content toc-card">
+    <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header"><i class="iconfont icon-wenzhang_huaban" style="padding-right: 2px;"></i>最近文章</div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2024-09-01</div>
+        <a href="/posts/34123/"><div class="recent-posts-item-content">黑神话:悟空 通关+全成就 无剧透评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-05-29</div>
+        <a href="/posts/26312/"><div class="recent-posts-item-content">塞尔达传说：王国之泪 无剧透评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-01-30</div>
+        <a href="/posts/1919/"><div class="recent-posts-item-content">火焰纹章：结合 通关评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2022-11-27</div>
+        <a href="/posts/54965/"><div class="recent-posts-item-content">战神：诸神黄昏 白金通关评测</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>Copyright ©
+          
+          2020 -
+          
+          2024
+        </span>
+        <a href="/" class="footer-link">攀叔的万事屋 </a>
+      </div>
+    </div>
+
+    
+    <div class="footer-dsc">
+      
+      
+      Powered by
+      <a href="https://hexo.io/" class="footer-link" target="_blank" rel="nofollow noopener noreferrer">&nbsp;Hexo </a>
+      
+      
+      <span>&nbsp;|&nbsp;</span>
+      
+      
+      
+      Theme -
+      <a href="https://github.com/theme-kaze" class="footer-link" target="_blank"
+        rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
+      
+    </div>
+    
+    
+    
+    
+</footer>
+  <a role="button" id="scrollbutton" class="basebutton" >
+  <i class="iconfont icon-arrowleft button-icon"></i>
+</a>
+<a role="button" id="menubutton" class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a role="button" id="popbutton" class="basebutton">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a role="button" id="darkbutton" class="basebutton darkwidget">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+
+  
+  
+  
+  <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img');
+    var i;
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a');
+      wrapper.setAttribute('data-fslightbox', 'gallery');
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'));
+      wrapper.setAttribute('style', 'width: 100%; display: flex; justify-content: center;');
+      img[i].parentElement.insertBefore(wrapper, img[i]);
+      wrapper.appendChild(img[i]);
+    }
+    refreshFsLightbox();
+  }
+</script>
+<script>loadScript("//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js", addImgLayout)</script>
+  
+  
+  
+<script src="/js/main.js"></script>
+
+  
+  
+  <script>
+    var addLazyload = function () {
+      var observer = lozad('.lozad', {
+        load: function (el) {
+          el.srcset = el.getAttribute('data-src');
+        },
+        loaded: function (el) {
+          el.classList.add('loaded');
+        }
+      });
+      observer.observe();
+    }
+  </script>
+  <script>loadScript("/js/lib/lozad.min.js", addLazyload)</script>
+  
+  
+</body>
+
+</html>

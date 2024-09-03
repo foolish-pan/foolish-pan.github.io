@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<meta  lang="zh-CN" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#fff" id="theme-color">
+  <link rel="icon" href="/images/005.png">
+  <title>攀叔的万事屋</title>
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      return setting;
+    };
+    // apply current darkmode setting
+    var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      if(setting === getCssMediaQuery()) {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else if(reverseDarkList[setting]) {
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+      }
+    };
+    setDarkmode();
+  </script>
+  <script>
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  </script>
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  
+  <link rel="preload" href="//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js" as="script">
+  
+  
+  <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  <div class="wrapper">
+    
+    <nav class="navbar">
+  <div class="navbar-logo">
+    <span class="navbar-logo-main">
+      
+      <img class="navbar-logo-img" src="/images/005.png">
+      
+      <span class="navbar-logo-dsc">攀叔的万事屋</span>
+    </span>
+  </div>
+  <div class="navbar-menu">
+    
+    <a href="/" class="navbar-menu-item">首页 </a>
+    
+    <a href="/archives" class="navbar-menu-item">归档 </a>
+    
+    <a href="/tags" class="navbar-menu-item">标签 </a>
+    
+    <a href="/categories" class="navbar-menu-item">分类 </a>
+    
+    <a href="/about" class="navbar-menu-item">关于 </a>
+    
+    <a href="/links" class="navbar-menu-item">友链 </a>
+    
+    <a class="navbar-menu-item darknavbar" id="dark"><i class="iconfont icon-weather"></i></a>
+  </div>
+</nav>
+    
+    <div class="section-wrap">
+      <div class="container">
+        <div class="columns">
+          <main class="main-column">
+<div class="image-wrapper">
+  <img src="/images/Fire Emblem Engage/2023013019245500_s.jpg" data-src="/images/Fire Emblem Engage/2023013019245500_s.jpg"
+    srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+    class="image lozad">
+</div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      火焰纹章：结合 通关评测
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2023-01-30T19:43:46.000Z" style="display: flex; align-items: center;">
+      <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+      <span>2023-01-30</span>
+    </time>
+    
+    <span class="dot"></span>
+    
+    <a href="/categories/游戏/" class="post-meta-link">游戏</a>
+    
+    
+    
+    <span class="dot"></span>
+    <span>2.4k 字</span>
+    
+  </div>
+  
+  <div class="post-meta post-show-meta" style="margin-top: -10px;">
+    <div style="display: flex; align-items: center;">
+      <i class="iconfont icon-biaoqian" style="margin-right: 2px; font-size: 1.15rem;"></i>
+      
+      
+        <a href="/tags/评测/" class="post-meta-link">评测</a>
+      
+      
+      <span class="dot"></span>
+      
+        <a href="/tags/Switch/" class="post-meta-link">Switch</a>
+      
+      
+      <span class="dot"></span>
+      
+        <a href="/tags/火纹/" class="post-meta-link">火纹</a>
+      
+    </div>
+  </div>
+  
+  </header>
+  <div id="section" class="post-content">
+    <h5 id="游戏主要内容"><a href="#游戏主要内容" class="headerlink" title="游戏主要内容"></a>游戏主要内容</h5><ol>
+<li>主线关卡共26章，支线共2+12+1章，普通难度轻松模式一周目通关约40+h</li>
+<li>DLC会追加一张地图，目前只有1张战斗地图</li>
+</ol>
+<h5 id="角色与培养"><a href="#角色与培养" class="headerlink" title="角色与培养"></a>角色与培养</h5><ol>
+<li>本作在角色培养上做了许多简化，但是也很好的保留着以前的策略性</li>
+<li>普通的职业分为基础职业和上级职业，最高等级都是20级，特殊职业不分基础和上级，最高等级40级</li>
+<li>每个职业都有对应的职业种类，传统的比如重甲、骑马、飞行，也有本作新加的连携、气功、隐秘等</li>
+<li>职业只要满足条件就可以直接转职，一般都是武器资质和前置职业等级，可以无限横转</li>
+<li>角色有内置等级，会对经验值补正有影响，比如练满20级之后转职会重置为1级，但是内置等级还是不变，并不会因为显示1级击杀高等级的敌人就可以多拿经验</li>
+<li>鉴于上面两条，本作不同于以往的是越早转职越好，可以吃到上级职业的更好的成长率补正</li>
+<li>取消了武器熟练度，转换为了武器资质，影响可转职业，每个职业对应可使用的武器和对应的资质等级是固定的，也就是说，如果一个职业的武器资质等级是A，那么这个职业就绝对无法使用S级的武器</li>
+<li>上级职业在Lv5，特殊职业是Lv25会习得职业特技，但是是固定跟随职业，没法像风花雪月一样转职后任意装备</li>
+<li>新增了体格属性，用来抵消武器的重量，超出体格的重量会扣减速度</li>
+<li>每个角色都会显示一个综合能力值，目测基本等于能力值的总和</li>
+<li>角色都有自带一个被动技能，无法更换，角色的强度很大一部分看的是技能的强度</li>
+<li>关于收人基本上不用担心错过，基本都是一个王室+两个家臣的组合，绝大部分都是主线自动入队，支线2章各有一个需要对话加入的，其他还有少数需要对话加入的，不过都很明显，不用担心错过</li>
+<li>角色支援等级最高A，随着主角和其他角色支援等级的提升，会解锁伙伴手册里的照片~</li>
+</ol>
+<h5 id="戒指与战斗系统"><a href="#戒指与战斗系统" class="headerlink" title="戒指与战斗系统"></a>戒指与战斗系统</h5><ol>
+<li>本作的战斗的一大核心就是纹章士戒指系统，DLC的两个不是戒指····是手镯·····</li>
+<li>纹章士戒指的牵绊等级是独立于角色之间的支援等级的，带着戒指战斗就可以积攒牵绊经验，牵绊Lv5和Lv10需要积攒足够的经验对话提升，如果不对话就会一直卡着·····</li>
+<li>角色的武器资质需要通过和对应纹章士戒指的牵绊等级获得，不过也不用担心需要刷刷刷，可以直接花费牵绊碎片直接提升角色和纹章士戒指的牵绊等级</li>
+<li>主线12个戒指的初始牵绊等级上限为10，中期开始有12个支线关卡分别对应12个戒指，通过后可以将牵绊等级提升到20</li>
+<li>每个戒指外传关卡地图都是原作经典关卡的重置，连BGM都是重新编曲版，唯一可惜的就是和原作没啥剧情，基本都是回忆+战斗+解锁等级····</li>
+<li>戒指可以装备给任意角色，每个戒指都会有若干个被动技能，随牵绊等级不断解锁，但是根据对应角色的职业类型，戒指的被动技能会有不同的加成</li>
+<li>每个戒指都有对应的纹章士武器，也是随牵绊等级解锁，可以消耗连战获取的素材对武器属性进行强化，而且因为纹章士是自带武器资质的，所以完全不用担心因为角色职业的原因而导致纹章士武器用不了</li>
+<li>每个戒指都有对应的原作牵绊戒指，牵绊戒指可以看做是纹章士戒指的降级版，可以在基地10连抽（可观星SL），根据稀有度从C到S，多个低等级的戒指可以合成高等级的戒指，部分S级的戒指会有被动技能追加</li>
+<li>带着戒指战斗可以获得SP，消耗SP可以学戒指带有的被动技能，可以无视职业自由装备技能，整个游戏最具研究度的一个点就是技能的搭配</li>
+<li>战斗中装备纹章士戒指的角色在结合槽满的时候可以和纹章士合体，合体有回合数限制，提升牵绊等级可以延长，到了会自动解除</li>
+<li>结合状态下可以使用纹章士的特殊技能，每次结合限使用一次，有一些特殊技能用好了是可以扭转战局的，比如贝老师的技能就是一次再动周围的个队友，琳的技能是10格的超远攻击</li>
+<li>本作新加的职业战斗类型，在战斗中也很关键<ul>
+<li>连携：队友攻击时如果敌人在攻击范围内，则可以发动连携攻击，伤害和命中都是根据能力值换算的固定值，每回合次数不限，虽然伤害不是特别高，但是备不住可以薄利多嫖啊（我的重甲就曾经在一个关卡里被一堆普攻根本打不穿防御敌人连携打到残血····）</li>
+<li>气功：满血时可以消耗10%的血量帮队友无效化一次攻击，关键时刻还是非常有用的，后期的敌人伤害高了之后随便被打一下都不止10%的血，可惜的是不是满血无法发动，敌人发动时可以根据这个特点无效化对方的连携防御</li>
+<li>隐秘：地形效果加倍，用好了比前两个都爽，本作单角色开无双的最大依仗，最大的用处就是蹲草丛+回避，什么？你说没草丛的关卡咋办，纹章士戒指强开地形了解一下~</li>
+</ul>
+</li>
+<li>本作对战斗地图的一些交互要素也做了很人性的简化，比如开门不一定非要钥匙或者小偷撬锁了，可以直接砸掉，宝箱也是所有职业都可以直接开</li>
+<li>不要以为开锁的活没了盗贼就没用了，本作的初始职业是盗贼的角色都很强力，职业类型是隐秘，草丛蹲人开无双都是OK的</li>
+<li>本作的武器相克系统非常关键，不单单像前作一样是命中回避的增减，主动攻击时如果克制对方的武器，可以将敌人打出Break状态，可以使敌人在下次战斗中无法反击，相对的我方也要小心被敌人使用克制武器攻击</li>
+</ol>
+<h5 id="基地和物资收集"><a href="#基地和物资收集" class="headerlink" title="基地和物资收集"></a>基地和物资收集</h5><ol>
+<li>基地和基地设施随主线进度解锁</li>
+<li>主角的房间：可以睡觉推进时间，而且会有不同的队友来叫起床~</li>
+<li>茶座餐厅：可以吃饭，增加角色见的好感度和提升临时属性，可以听音乐也可以在看板处投资国家，投资的国家会增加可收养的动物和遭遇战中稀有敌人的出现率</li>
+<li>纹章士之间：技能继承，戒指10连抽，擦拭戒指（能增加牵绊经验，如果有奇怪的声音，不要想歪，那是在擦戒指~恩·····）</li>
+<li>锻炼之间：队友切磋，有次数限制，建议用来补全快要升级的角色经验，对手是随机的，输赢都会有经验拿，也可以消耗牵绊碎片指定纹章士，用来快速提升牵绊等级</li>
+<li>武器道具店，本作没有武器耐久，但是各种杖其实是算在消耗品里的，有使用次数限制，也根据职业有攻击杖和辅助杖的使用限制。</li>
+<li>锻造店可以升级和进化武器，也可以在武器上打上对应戒指的纹章，定向修改武器的各项属性。</li>
+<li>服装店会根据进度解锁新服装，不过可惜的是服装只能在基地传，没法穿出去打架·····</li>
+<li>试炼屋：连战和联网，会有经验值奖励和宝珠奖励，可以用来强化纹章士武器</li>
+<li>钓鱼、摸狗：可以获取牵绊碎片</li>
+<li>其他的一些小游戏：用来增加临时属性</li>
+</ol>
+<h5 id="其他的一些内容"><a href="#其他的一些内容" class="headerlink" title="其他的一些内容"></a>其他的一些内容</h5><ol>
+<li>剧情·······不要太在意~ 专注体验游戏系统就好~</li>
+<li>人设这次是真的不错，满足各种人群的各种口味的各种XP~</li>
+<li>没有标题欺诈，可以结婚，需要完整外传拿到结婚戒指，就可以选择一个支援等级A的角色结婚</li>
+</ol>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><ol>
+<li>内容十分丰富，做出了许多友好的改动和革新，使得整个游戏玩起来十分舒适流畅</li>
+<li>对于情怀向老玩家可能有些不足，纹章士和原作的联系也就只有一张外传地图，剧情上的关联基本没有</li>
+<li>年度最佳策略游戏提名肯定有了~</li>
+</ol>
+<img src="/images/Fire Emblem Engage/2023012220011800_s.jpg" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/Fire Emblem Engage/2023012220011800_s.jpg" class="lozad post-image">
+
+  </div>
+  <div>
+  
+  <div class="post-note note-warning copyright" style="margin-top: 42px">
+    <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="https://foolish-pan.github.io/about">Foolish攀</a></p>
+    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="https://foolish-pan.github.io/posts/1919/">https://foolish-pan.github.io/posts/1919/</a></p>
+    <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！</p>
+  </div>
+  
+  </div>
+</article>
+<div class="nav">
+  
+  <div class="nav-item-prev">
+    <a href="/posts/26312/" class="nav-link">
+      <i class="iconfont icon-left nav-prev-icon"></i>
+      <div>
+        <div class="nav-label">上一篇</div>
+        
+        <div class="nav-title">塞尔达传说：王国之泪 无剧透评测 </div>
+        
+      </div>
+    </a>
+  </div>
+  
+  
+  <div class="nav-item-next">
+    <a href="/posts/54965/" class="nav-link">
+      <div>
+        <div class="nav-label">下一篇</div>
+        
+        <div class="nav-title">战神：诸神黄昏 白金通关评测 </div>
+        
+      </div>
+      <i class="iconfont icon-right nav-next-icon"></i>
+    </a>
+  </div>
+  
+</div>
+
+<div class="card card-content toc-card" id="mobiletoc">
+  <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9"><span class="toc-text">游戏主要内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A7%92%E8%89%B2%E4%B8%8E%E5%9F%B9%E5%85%BB"><span class="toc-text">角色与培养</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%88%92%E6%8C%87%E4%B8%8E%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F"><span class="toc-text">戒指与战斗系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9F%BA%E5%9C%B0%E5%92%8C%E7%89%A9%E8%B5%84%E6%94%B6%E9%9B%86"><span class="toc-text">基地和物资收集</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9"><span class="toc-text">其他的一些内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+</div></main>
+          <aside class="left-column">
+            
+            <div class="card card-author">
+              
+<img src="/images/003.gif" class="author-img">
+
+<p class="author-name">Foolish攀</p>
+<p class="author-description">靠谱的中年技术宅男</p>
+<div class="author-message">
+  <a class="author-posts-count" href="/archives">
+    <span>22</span>
+    <span>文章</span>
+  </a>
+  <a class="author-categories-count" href="/categories">
+    <span>1</span>
+    <span>分类</span>
+  </a>
+  <a class="author-tags-count" href="/tags">
+    <span>21</span>
+    <span>标签</span>
+  </a>
+</div>
+
+            </div>
+            
+            <div class="sticky-tablet">
+  
+  
+  <article class="display-when-two-columns spacer">
+    <div class="card card-content toc-card">
+      <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9"><span class="toc-text">游戏主要内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A7%92%E8%89%B2%E4%B8%8E%E5%9F%B9%E5%85%BB"><span class="toc-text">角色与培养</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%88%92%E6%8C%87%E4%B8%8E%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F"><span class="toc-text">戒指与战斗系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9F%BA%E5%9C%B0%E5%92%8C%E7%89%A9%E8%B5%84%E6%94%B6%E9%9B%86"><span class="toc-text">基地和物资收集</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9"><span class="toc-text">其他的一些内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+    </div>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="categories-card">
+  <div class="categories-header"><i class="iconfont icon-fenlei" style="padding-right: 2px;"></i>分类</div>
+  <div class="categories-list">
+    
+      <a href="/categories/游戏">
+        <div class="categories-list-item">
+          游戏
+          <span class="categories-list-item-badge">22</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content">
+    <div class="tags-card">
+  <div class="tags-header"><i class="iconfont icon-biaoqian" style="padding-right: 2px;"></i>热门标签</div>
+  <div class="tags-list">
+    
+    <a href="\tags\评测" title="评测"><div class="tags-list-item">评测</div></a>
+    
+    <a href="\tags\Switch" title="Switch"><div class="tags-list-item">Switch</div></a>
+    
+    <a href="\tags\PC" title="PC"><div class="tags-list-item">PC</div></a>
+    
+    <a href="\tags\银河城" title="银河城"><div class="tags-list-item">银河城</div></a>
+    
+    <a href="\tags\马里奥" title="马里奥"><div class="tags-list-item">马里奥</div></a>
+    
+    <a href="\tags\黑神话" title="黑神话"><div class="tags-list-item">黑神话</div></a>
+    
+    <a href="\tags\国产" title="国产"><div class="tags-list-item">国产</div></a>
+    
+    <a href="\tags\像素" title="像素"><div class="tags-list-item">像素</div></a>
+    
+    <a href="\tags\传说系列" title="传说系列"><div class="tags-list-item">传说系列</div></a>
+    
+    <a href="\tags\聚会" title="聚会"><div class="tags-list-item">聚会</div></a>
+    
+    <a href="\tags\火纹" title="火纹"><div class="tags-list-item">火纹</div></a>
+    
+    <a href="\tags\无双" title="无双"><div class="tags-list-item">无双</div></a>
+    
+    <a href="\tags\塞尔达" title="塞尔达"><div class="tags-list-item">塞尔达</div></a>
+    
+    <a href="\tags\卡比" title="卡比"><div class="tags-list-item">卡比</div></a>
+    
+    <a href="\tags\战神" title="战神"><div class="tags-list-item">战神</div></a>
+    
+    <a href="\tags\PS4" title="PS4"><div class="tags-list-item">PS4</div></a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+          <aside class="right-column">
+            <div class="sticky-widescreen">
+  
+  
+  <article class="card card-content toc-card">
+    <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9"><span class="toc-text">游戏主要内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A7%92%E8%89%B2%E4%B8%8E%E5%9F%B9%E5%85%BB"><span class="toc-text">角色与培养</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%88%92%E6%8C%87%E4%B8%8E%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F"><span class="toc-text">戒指与战斗系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9F%BA%E5%9C%B0%E5%92%8C%E7%89%A9%E8%B5%84%E6%94%B6%E9%9B%86"><span class="toc-text">基地和物资收集</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9"><span class="toc-text">其他的一些内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header"><i class="iconfont icon-wenzhang_huaban" style="padding-right: 2px;"></i>最近文章</div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2024-09-01</div>
+        <a href="/posts/34123/"><div class="recent-posts-item-content">黑神话:悟空 通关+全成就 无剧透评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-05-29</div>
+        <a href="/posts/26312/"><div class="recent-posts-item-content">塞尔达传说：王国之泪 无剧透评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-01-30</div>
+        <a href="/posts/1919/"><div class="recent-posts-item-content">火焰纹章：结合 通关评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2022-11-27</div>
+        <a href="/posts/54965/"><div class="recent-posts-item-content">战神：诸神黄昏 白金通关评测</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>Copyright ©
+          
+          2020 -
+          
+          2024
+        </span>
+        <a href="/" class="footer-link">攀叔的万事屋 </a>
+      </div>
+    </div>
+
+    
+    <div class="footer-dsc">
+      
+      
+      Powered by
+      <a href="https://hexo.io/" class="footer-link" target="_blank" rel="nofollow noopener noreferrer">&nbsp;Hexo </a>
+      
+      
+      <span>&nbsp;|&nbsp;</span>
+      
+      
+      
+      Theme -
+      <a href="https://github.com/theme-kaze" class="footer-link" target="_blank"
+        rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
+      
+    </div>
+    
+    
+    
+    
+</footer>
+  <a role="button" id="scrollbutton" class="basebutton" >
+  <i class="iconfont icon-arrowleft button-icon"></i>
+</a>
+<a role="button" id="menubutton" class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a role="button" id="popbutton" class="basebutton">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a role="button" id="darkbutton" class="basebutton darkwidget">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+
+  
+  
+  
+  <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img');
+    var i;
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a');
+      wrapper.setAttribute('data-fslightbox', 'gallery');
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'));
+      wrapper.setAttribute('style', 'width: 100%; display: flex; justify-content: center;');
+      img[i].parentElement.insertBefore(wrapper, img[i]);
+      wrapper.appendChild(img[i]);
+    }
+    refreshFsLightbox();
+  }
+</script>
+<script>loadScript("//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js", addImgLayout)</script>
+  
+  
+  
+<script src="/js/main.js"></script>
+
+  
+  
+  <script>
+    var addLazyload = function () {
+      var observer = lozad('.lozad', {
+        load: function (el) {
+          el.srcset = el.getAttribute('data-src');
+        },
+        loaded: function (el) {
+          el.classList.add('loaded');
+        }
+      });
+      observer.observe();
+    }
+  </script>
+  <script>loadScript("/js/lib/lozad.min.js", addLazyload)</script>
+  
+  
+</body>
+
+</html>

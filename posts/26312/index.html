@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<meta  lang="zh-CN" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#fff" id="theme-color">
+  <link rel="icon" href="/images/005.png">
+  <title>攀叔的万事屋</title>
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      return setting;
+    };
+    // apply current darkmode setting
+    var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      if(setting === getCssMediaQuery()) {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else if(reverseDarkList[setting]) {
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+      }
+    };
+    setDarkmode();
+  </script>
+  <script>
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  </script>
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  
+  <link rel="preload" href="//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js" as="script">
+  
+  
+  <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  <div class="wrapper">
+    
+    <nav class="navbar">
+  <div class="navbar-logo">
+    <span class="navbar-logo-main">
+      
+      <img class="navbar-logo-img" src="/images/005.png">
+      
+      <span class="navbar-logo-dsc">攀叔的万事屋</span>
+    </span>
+  </div>
+  <div class="navbar-menu">
+    
+    <a href="/" class="navbar-menu-item">首页 </a>
+    
+    <a href="/archives" class="navbar-menu-item">归档 </a>
+    
+    <a href="/tags" class="navbar-menu-item">标签 </a>
+    
+    <a href="/categories" class="navbar-menu-item">分类 </a>
+    
+    <a href="/about" class="navbar-menu-item">关于 </a>
+    
+    <a href="/links" class="navbar-menu-item">友链 </a>
+    
+    <a class="navbar-menu-item darknavbar" id="dark"><i class="iconfont icon-weather"></i></a>
+  </div>
+</nav>
+    
+    <div class="section-wrap">
+      <div class="container">
+        <div class="columns">
+          <main class="main-column">
+<div class="image-wrapper">
+  <img src="/images/塞尔达传说 王国之泪/2023050207424700_s.jpg" data-src="/images/塞尔达传说 王国之泪/2023050207424700_s.jpg"
+    srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+    class="image lozad">
+</div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      塞尔达传说：王国之泪 无剧透评测
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2023-05-29T18:33:42.000Z" style="display: flex; align-items: center;">
+      <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+      <span>2023-05-29</span>
+    </time>
+    
+    <span class="dot"></span>
+    
+    <a href="/categories/游戏/" class="post-meta-link">游戏</a>
+    
+    
+    
+    <span class="dot"></span>
+    <span>2.8k 字</span>
+    
+  </div>
+  
+  <div class="post-meta post-show-meta" style="margin-top: -10px;">
+    <div style="display: flex; align-items: center;">
+      <i class="iconfont icon-biaoqian" style="margin-right: 2px; font-size: 1.15rem;"></i>
+      
+      
+        <a href="/tags/评测/" class="post-meta-link">评测</a>
+      
+      
+      <span class="dot"></span>
+      
+        <a href="/tags/Switch/" class="post-meta-link">Switch</a>
+      
+      
+      <span class="dot"></span>
+      
+        <a href="/tags/塞尔达传说/" class="post-meta-link">塞尔达传说</a>
+      
+    </div>
+  </div>
+  
+  </header>
+  <div id="section" class="post-content">
+    <h5 id="目前探索进度"><a href="#目前探索进度" class="headerlink" title="目前探索进度"></a>目前探索进度</h5><ol>
+<li>游戏时长140+，主线任务通关，地图全开，神庙全开</li>
+<li>支线任务完成过半，套装装备基本完成，电池目前还差2节升满，呀哈哈随缘找了100个不到的样子</li>
+</ol>
+<h5 id="超级丰富的探索内容"><a href="#超级丰富的探索内容" class="headerlink" title="超级丰富的探索内容"></a>超级丰富的探索内容</h5><ol>
+<li>初始老套路，先过四个教学神庙拿能力，不过这次初始区域比野炊大了许多，探索内容和多了不少</li>
+<li>整个世界分为空中、地面、地下三层，探索内容保守估计是前作的3倍以上</li>
+<li>地图依然要开塔，不过这次的塔比前作更有功能性，也不需要自己辛辛苦苦往上爬，更像是迷你挑战</li>
+<li>开塔会同时解锁地面和空中的地图，地下的地图则需要通过其他途径解锁</li>
+<li>空中乍一看空岛稀稀拉拉的，但是纵向探索深度很大，探索起来内容一点都不少。而且想想也对，要是空中铺满了，都遮天蔽日的也不合理</li>
+<li>神庙，经典要素，地面120个+空中32个，老套路4个神庙1格心或耐力</li>
+<li>这次的神庙总体难度比野炊要简单一些，除了一开始使用能力的思路还没有打开会导致解谜时间比较长，后面套路熟悉了就会比较快了</li>
+<li>和前作一样，会有部分神庙的解谜是在外面的，也许是为了突出本作的搭建玩法，有大半的神庙外解谜都是运送东西</li>
+<li>地下需要通过地面上的一些落穴下去，整个地下面积和地面是1:1的大小，有一些地区只有通过特定的落穴才能到达</li>
+<li>整个地下基本上是全黑的，下去之前需要准备好照明手段，有黑暗恐惧症的人可能会比较苦手</li>
+<li>地下的开图看的是树根，每激活一个树根，都会永久照亮一片区域并显示地图</li>
+<li>每个 <em><strong>地面的神庙</strong></em>  都有一个 <em><strong>根树的下地</strong></em>  相对应，位置完全对应，名字也有关系，完全可以通过地上找地下或根据底下找地上</li>
+<li>地下的地形基本就是整个地上的镜像反转，山对应谷，基本上地面上有东西的地方，肯定也会有东西</li>
+<li>这次还新追加了山洞，会出现在空中和地面上任何有纵深的地方，数量也非常多</li>
+<li>发现山洞之后会自动在地图上标记山洞的入口，有些山洞会有不止一个入口</li>
+<li>每个山洞里都会藏着一只魔犹依，找到打败之后会掉落特殊收集物，收集到之后对应山洞的入口图标上会打钩</li>
+<li>由于山洞不像神庙可有有雷达，一开始找起来会比较麻烦，不过探索中也会发现一些好的方法，比如有方法可以标记区域内的所有山洞，具体就不多剧透了</li>
+</ol>
+<h5 id="多到肝疼的收集要素"><a href="#多到肝疼的收集要素" class="headerlink" title="多到肝疼的收集要素"></a>多到肝疼的收集要素</h5><ol>
+<li>这作的收集要素真的多到撑，之前提到的开塔、神庙、山洞这些都是常规操作了，地下有完全对应地面神庙数量的树根需要点亮</li>
+<li>上百山洞里的魔犹依，收集之后可以兑换豪华装备</li>
+<li>呀哈哈种子，据网上的全收集大佬整理，依然有900个点，但是有100个是送呀哈哈找朋友，一次会给2个种子，所以这作一共有足足1000个呀哈哈种子</li>
+<li>任务方面，23主线+60情节挑战+31神庙挑战+139迷你挑战+18回忆收集，其中情节挑战是前作没有的一种新任务类型，完成后一半都会有关键道具入手或者对事件有推进，属于次主线</li>
+<li>前作所有的防具在基本都有，而且所有前作只能通过刷Amiibo获取的装备，在本作都有正常的途径获取</li>
+<li>Amiibo这次重要性略显削弱，林克狼没了，特殊装备也有了游戏内的获取方式，目前唯一Amiibo限定的道具是滑翔帆的皮肤</li>
+<li>防具强化还是找大精灵，不过大精灵这次不是花钱解锁了，而是通过支线任务解锁，但是解锁之后强化装备要花钱了······</li>
+<li>在地下还会找到一种叫“魄”的收集物，可以到特定的商店兑换一些特殊装备</li>
+<li>驿站这次还新增了点数兑换礼品，通过登录马匹、驿站住宿或者完整驿站相关任务都可以获取点数</li>
+<li>马匹这次能力可以在马神那里升级，理论都可以升级到全5星，又是肝疼的一天·····</li>
+<li>这次马匹还新增加了一项新的属性：捖力，影响拉车的性能，不过要想拉车还要先获取到特殊的马鞍</li>
+</ol>
+<h5 id="全新的能力和道具"><a href="#全新的能力和道具" class="headerlink" title="全新的能力和道具"></a>全新的能力和道具</h5><ol>
+<li>官方的预告片已经把初始的种能力都简单介绍过了，这里只说下使用感受</li>
+<li>究极手，本作最核心能力，使林·海拉鲁·老流氓·林克直接升级为灾厄林克，也充分印证了科技才是生产力。不过一开始使用的时候需要熟悉一下</li>
+<li>预料建造，同样是核心能力，直接改变了武器系统，所有非动物类材料都可以粘在武器&#x2F;盾牌&#x2F;弓箭上，可以组合非常多的效果武器，因此前作的属性武器和属性箭都被取消了</li>
+<li>通天术，在本作非常多纵深探索的场景下尤为重要，改变了前作的攀爬过程，刚开始的时候很容易忽略这个能力，后面是看头顶有点啥都要试试能不能钻</li>
+<li>倒转乾坤，可以倒转非生物的运行轨迹，一开始觉得这个能力只有在解决一些特定的机关时有用，后面思路打开之后，和通天术配合可以一跃变成逃课神器</li>
+<li>地图、相机、Amiibo，几个功能性的能力，不多赘述</li>
+<li>蓝图，官方未透露的能力，支线任务解锁，可以记录搭建的载具，官方也提供了设计图，在需要的时候可以自动检索范围内的组件一键组装，组件不足时可以消耗本作特有的矿石补充</li>
+<li>对标前作英杰技能的主动技能本作也有，基本都是主线解锁，对应：滑翔、载具、射箭、攻击4中动作，而且也和前作的技能一样可以进行强化</li>
+<li>武器在分为腐蚀和未腐蚀的两种，未腐蚀的武器威力和耐久都会更好，盾牌和弓箭则没有被腐蚀的版本</li>
+<li>武器还根据系列新增了特殊效果，比如卓拉系列是沾湿之后攻击力会提升，格鲁德系列在附加预料时会增加面板但是会降低耐久，活用的话可以组合出非常多玩法</li>
+<li>能力升级方面，除了之前的心心和耐力，这次还多了电池，最多16节，在激活左纳乌设备的时候会逐渐消耗，关闭之后会逐渐恢复</li>
+<li>左纳乌装置也是本作核心的建造材料，可以通过分散在各处的扭蛋机获取，不同的扭蛋机能获取到装置种类是固定的</li>
+<li>料理方面，这次很人性的添加了菜单功能，可以记录所有做过的料理和对应使用的食材</li>
+</ol>
+<h5 id="进化的解谜与战斗"><a href="#进化的解谜与战斗" class="headerlink" title="进化的解谜与战斗"></a>进化的解谜与战斗</h5><ol>
+<li>本作的神庙难度总体难度比野炊要低，总体还是归功于本作的几个超好用的能力，也没有野炊里那种需要连续解谜的中性神庙</li>
+<li>教学神庙还在，而且种类变得更多了，生怕玩家有不知道的战斗技巧</li>
+<li>还有一个很有意思的事孑然一身系列，就是进去会被没收装备道具的，不过总体还是另一种机制的教学</li>
+<li>没有体感神庙！没有体感神庙！没有体感神庙！</li>
+<li>主线的大型神殿也比前作体验要好，而且和大地图是无缝衔接的，对应的神殿Boss也各有特色</li>
+<li>最赞的是，神殿里的主线Boss不像前作打了就没了，这次所有的主线Boss都有再战的途径，而且奖励也都不错</li>
+<li>怪物方面，这次不管是小型怪物和大型怪物都有明显的种类扩充，而且很有任天堂的特色，基本都有对应的机制，找到机制后都不算很难</li>
+<li>本次还为喜欢硬核战斗的玩家准备了斗技场，都是各种怪物的连续挑战，比如人马五连···</li>
+<li>所有怪物这次都多了头上的角，而且伤害不低，所以这次哪怕怪物空手也有不小的威胁性，不过打败怪物之后可以获得对应的角作为余料建造的素材，很多极品武器都要通过这种途径才能获得</li>
+<li>本作由于Ban掉了榴莲，导致前期能获取额外生命的途径变得比较有限，所以前期战斗难度略高</li>
+<li>最终Boss这次做的史诗感爆棚，演出也相当精彩，绝对是一场战斗技巧的综合期末考</li>
+<li>个人体验的时候由于在找到最终Boss前吃光了回复料理，直接在无回复的情况下被虐了好多次之后才过，不过这也充分体验了战胜后的成就感</li>
+</ol>
+<h5 id="个人的游玩体验"><a href="#个人的游玩体验" class="headerlink" title="个人的游玩体验"></a>个人的游玩体验</h5><ol>
+<li>个人的游玩流程是近乎完美的体验，从一开始没有任何剧透的情况下通关了主线，然后网上陆续有了一些收集地图，就开始参照地图进行收集，收集的差不多的时候，各种整活玩法和BUG套路被开发出来了，然后再去尝试整活玩法~</li>
+<li>游戏是个好游戏，就是玩起来时间过得有点快~</li>
+</ol>
+<h5 id="一些总结和建议"><a href="#一些总结和建议" class="headerlink" title="一些总结和建议"></a>一些总结和建议</h5><ol>
+<li>首先，一定要尽力避免被剧透，这次的剧情十分关键，剧透会极大影响游玩体验</li>
+<li>个人最建议的游玩顺序：初始岛—主线剧情推进—收集回忆—找最终Boss，如果打乱顺序可能会在一些剧情的时候有些跳戏</li>
+<li>一个词总结一下野炊个人觉得比较合适的是：“互动”，而王国之泪把这种互动又提升到了另一个高度，再用一个词总结的话我觉得应该是 “创造”</li>
+<li>最后，塞尔达是天！</li>
+</ol>
+<p>以上~</p>
+<img src="/images/塞尔达传说 王国之泪/2023051019123300_s.jpg" alt="2023051019123300_s" style="zoom:50%;" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/塞尔达传说 王国之泪/2023051019123300_s.jpg" class="lozad post-image">
+
+
+  </div>
+  <div>
+  
+  <div class="post-note note-warning copyright" style="margin-top: 42px">
+    <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="https://foolish-pan.github.io/about">Foolish攀</a></p>
+    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="https://foolish-pan.github.io/posts/26312/">https://foolish-pan.github.io/posts/26312/</a></p>
+    <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！</p>
+  </div>
+  
+  </div>
+</article>
+<div class="nav">
+  
+  <div class="nav-item-prev">
+    <a href="/posts/34123/" class="nav-link">
+      <i class="iconfont icon-left nav-prev-icon"></i>
+      <div>
+        <div class="nav-label">上一篇</div>
+        
+        <div class="nav-title">黑神话:悟空 通关+全成就 无剧透评测 </div>
+        
+      </div>
+    </a>
+  </div>
+  
+  
+  <div class="nav-item-next">
+    <a href="/posts/1919/" class="nav-link">
+      <div>
+        <div class="nav-label">下一篇</div>
+        
+        <div class="nav-title">火焰纹章：结合 通关评测 </div>
+        
+      </div>
+      <i class="iconfont icon-right nav-next-icon"></i>
+    </a>
+  </div>
+  
+</div>
+
+<div class="card card-content toc-card" id="mobiletoc">
+  <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%9B%AE%E5%89%8D%E6%8E%A2%E7%B4%A2%E8%BF%9B%E5%BA%A6"><span class="toc-text">目前探索进度</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B6%85%E7%BA%A7%E4%B8%B0%E5%AF%8C%E7%9A%84%E6%8E%A2%E7%B4%A2%E5%86%85%E5%AE%B9"><span class="toc-text">超级丰富的探索内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%9A%E5%88%B0%E8%82%9D%E7%96%BC%E7%9A%84%E6%94%B6%E9%9B%86%E8%A6%81%E7%B4%A0"><span class="toc-text">多到肝疼的收集要素</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%A8%E6%96%B0%E7%9A%84%E8%83%BD%E5%8A%9B%E5%92%8C%E9%81%93%E5%85%B7"><span class="toc-text">全新的能力和道具</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%9B%E5%8C%96%E7%9A%84%E8%A7%A3%E8%B0%9C%E4%B8%8E%E6%88%98%E6%96%97"><span class="toc-text">进化的解谜与战斗</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E7%9A%84%E6%B8%B8%E7%8E%A9%E4%BD%93%E9%AA%8C"><span class="toc-text">个人的游玩体验</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93%E5%92%8C%E5%BB%BA%E8%AE%AE"><span class="toc-text">一些总结和建议</span></a></li></ol>
+</div></main>
+          <aside class="left-column">
+            
+            <div class="card card-author">
+              
+<img src="/images/003.gif" class="author-img">
+
+<p class="author-name">Foolish攀</p>
+<p class="author-description">靠谱的中年技术宅男</p>
+<div class="author-message">
+  <a class="author-posts-count" href="/archives">
+    <span>22</span>
+    <span>文章</span>
+  </a>
+  <a class="author-categories-count" href="/categories">
+    <span>1</span>
+    <span>分类</span>
+  </a>
+  <a class="author-tags-count" href="/tags">
+    <span>21</span>
+    <span>标签</span>
+  </a>
+</div>
+
+            </div>
+            
+            <div class="sticky-tablet">
+  
+  
+  <article class="display-when-two-columns spacer">
+    <div class="card card-content toc-card">
+      <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%9B%AE%E5%89%8D%E6%8E%A2%E7%B4%A2%E8%BF%9B%E5%BA%A6"><span class="toc-text">目前探索进度</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B6%85%E7%BA%A7%E4%B8%B0%E5%AF%8C%E7%9A%84%E6%8E%A2%E7%B4%A2%E5%86%85%E5%AE%B9"><span class="toc-text">超级丰富的探索内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%9A%E5%88%B0%E8%82%9D%E7%96%BC%E7%9A%84%E6%94%B6%E9%9B%86%E8%A6%81%E7%B4%A0"><span class="toc-text">多到肝疼的收集要素</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%A8%E6%96%B0%E7%9A%84%E8%83%BD%E5%8A%9B%E5%92%8C%E9%81%93%E5%85%B7"><span class="toc-text">全新的能力和道具</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%9B%E5%8C%96%E7%9A%84%E8%A7%A3%E8%B0%9C%E4%B8%8E%E6%88%98%E6%96%97"><span class="toc-text">进化的解谜与战斗</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E7%9A%84%E6%B8%B8%E7%8E%A9%E4%BD%93%E9%AA%8C"><span class="toc-text">个人的游玩体验</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93%E5%92%8C%E5%BB%BA%E8%AE%AE"><span class="toc-text">一些总结和建议</span></a></li></ol>
+    </div>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="categories-card">
+  <div class="categories-header"><i class="iconfont icon-fenlei" style="padding-right: 2px;"></i>分类</div>
+  <div class="categories-list">
+    
+      <a href="/categories/游戏">
+        <div class="categories-list-item">
+          游戏
+          <span class="categories-list-item-badge">22</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content">
+    <div class="tags-card">
+  <div class="tags-header"><i class="iconfont icon-biaoqian" style="padding-right: 2px;"></i>热门标签</div>
+  <div class="tags-list">
+    
+    <a href="\tags\评测" title="评测"><div class="tags-list-item">评测</div></a>
+    
+    <a href="\tags\Switch" title="Switch"><div class="tags-list-item">Switch</div></a>
+    
+    <a href="\tags\PC" title="PC"><div class="tags-list-item">PC</div></a>
+    
+    <a href="\tags\银河城" title="银河城"><div class="tags-list-item">银河城</div></a>
+    
+    <a href="\tags\马里奥" title="马里奥"><div class="tags-list-item">马里奥</div></a>
+    
+    <a href="\tags\黑神话" title="黑神话"><div class="tags-list-item">黑神话</div></a>
+    
+    <a href="\tags\国产" title="国产"><div class="tags-list-item">国产</div></a>
+    
+    <a href="\tags\像素" title="像素"><div class="tags-list-item">像素</div></a>
+    
+    <a href="\tags\传说系列" title="传说系列"><div class="tags-list-item">传说系列</div></a>
+    
+    <a href="\tags\聚会" title="聚会"><div class="tags-list-item">聚会</div></a>
+    
+    <a href="\tags\火纹" title="火纹"><div class="tags-list-item">火纹</div></a>
+    
+    <a href="\tags\无双" title="无双"><div class="tags-list-item">无双</div></a>
+    
+    <a href="\tags\塞尔达" title="塞尔达"><div class="tags-list-item">塞尔达</div></a>
+    
+    <a href="\tags\卡比" title="卡比"><div class="tags-list-item">卡比</div></a>
+    
+    <a href="\tags\战神" title="战神"><div class="tags-list-item">战神</div></a>
+    
+    <a href="\tags\PS4" title="PS4"><div class="tags-list-item">PS4</div></a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+          <aside class="right-column">
+            <div class="sticky-widescreen">
+  
+  
+  <article class="card card-content toc-card">
+    <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%9B%AE%E5%89%8D%E6%8E%A2%E7%B4%A2%E8%BF%9B%E5%BA%A6"><span class="toc-text">目前探索进度</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B6%85%E7%BA%A7%E4%B8%B0%E5%AF%8C%E7%9A%84%E6%8E%A2%E7%B4%A2%E5%86%85%E5%AE%B9"><span class="toc-text">超级丰富的探索内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%9A%E5%88%B0%E8%82%9D%E7%96%BC%E7%9A%84%E6%94%B6%E9%9B%86%E8%A6%81%E7%B4%A0"><span class="toc-text">多到肝疼的收集要素</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%A8%E6%96%B0%E7%9A%84%E8%83%BD%E5%8A%9B%E5%92%8C%E9%81%93%E5%85%B7"><span class="toc-text">全新的能力和道具</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%9B%E5%8C%96%E7%9A%84%E8%A7%A3%E8%B0%9C%E4%B8%8E%E6%88%98%E6%96%97"><span class="toc-text">进化的解谜与战斗</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E7%9A%84%E6%B8%B8%E7%8E%A9%E4%BD%93%E9%AA%8C"><span class="toc-text">个人的游玩体验</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93%E5%92%8C%E5%BB%BA%E8%AE%AE"><span class="toc-text">一些总结和建议</span></a></li></ol>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header"><i class="iconfont icon-wenzhang_huaban" style="padding-right: 2px;"></i>最近文章</div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2024-09-01</div>
+        <a href="/posts/34123/"><div class="recent-posts-item-content">黑神话:悟空 通关+全成就 无剧透评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-05-29</div>
+        <a href="/posts/26312/"><div class="recent-posts-item-content">塞尔达传说：王国之泪 无剧透评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-01-30</div>
+        <a href="/posts/1919/"><div class="recent-posts-item-content">火焰纹章：结合 通关评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2022-11-27</div>
+        <a href="/posts/54965/"><div class="recent-posts-item-content">战神：诸神黄昏 白金通关评测</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>Copyright ©
+          
+          2020 -
+          
+          2024
+        </span>
+        <a href="/" class="footer-link">攀叔的万事屋 </a>
+      </div>
+    </div>
+
+    
+    <div class="footer-dsc">
+      
+      
+      Powered by
+      <a href="https://hexo.io/" class="footer-link" target="_blank" rel="nofollow noopener noreferrer">&nbsp;Hexo </a>
+      
+      
+      <span>&nbsp;|&nbsp;</span>
+      
+      
+      
+      Theme -
+      <a href="https://github.com/theme-kaze" class="footer-link" target="_blank"
+        rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
+      
+    </div>
+    
+    
+    
+    
+</footer>
+  <a role="button" id="scrollbutton" class="basebutton" >
+  <i class="iconfont icon-arrowleft button-icon"></i>
+</a>
+<a role="button" id="menubutton" class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a role="button" id="popbutton" class="basebutton">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a role="button" id="darkbutton" class="basebutton darkwidget">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+
+  
+  
+  
+  <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img');
+    var i;
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a');
+      wrapper.setAttribute('data-fslightbox', 'gallery');
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'));
+      wrapper.setAttribute('style', 'width: 100%; display: flex; justify-content: center;');
+      img[i].parentElement.insertBefore(wrapper, img[i]);
+      wrapper.appendChild(img[i]);
+    }
+    refreshFsLightbox();
+  }
+</script>
+<script>loadScript("//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js", addImgLayout)</script>
+  
+  
+  
+<script src="/js/main.js"></script>
+
+  
+  
+  <script>
+    var addLazyload = function () {
+      var observer = lozad('.lozad', {
+        load: function (el) {
+          el.srcset = el.getAttribute('data-src');
+        },
+        loaded: function (el) {
+          el.classList.add('loaded');
+        }
+      });
+      observer.observe();
+    }
+  </script>
+  <script>loadScript("/js/lib/lozad.min.js", addLazyload)</script>
+  
+  
+</body>
+
+</html>

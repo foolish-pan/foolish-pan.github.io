@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<meta  lang="zh-CN" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#fff" id="theme-color">
+  <link rel="icon" href="/images/005.png">
+  <title>攀叔的万事屋</title>
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      return setting;
+    };
+    // apply current darkmode setting
+    var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      if(setting === getCssMediaQuery()) {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else if(reverseDarkList[setting]) {
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+      }
+    };
+    setDarkmode();
+  </script>
+  <script>
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  </script>
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  
+  <link rel="preload" href="//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js" as="script">
+  
+  
+  <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  <div class="wrapper">
+    
+    <nav class="navbar">
+  <div class="navbar-logo">
+    <span class="navbar-logo-main">
+      
+      <img class="navbar-logo-img" src="/images/005.png">
+      
+      <span class="navbar-logo-dsc">攀叔的万事屋</span>
+    </span>
+  </div>
+  <div class="navbar-menu">
+    
+    <a href="/" class="navbar-menu-item">首页 </a>
+    
+    <a href="/archives" class="navbar-menu-item">归档 </a>
+    
+    <a href="/tags" class="navbar-menu-item">标签 </a>
+    
+    <a href="/categories" class="navbar-menu-item">分类 </a>
+    
+    <a href="/about" class="navbar-menu-item">关于 </a>
+    
+    <a href="/links" class="navbar-menu-item">友链 </a>
+    
+    <a class="navbar-menu-item darknavbar" id="dark"><i class="iconfont icon-weather"></i></a>
+  </div>
+</nav>
+    
+    <div class="section-wrap">
+      <div class="container">
+        <div class="columns">
+          <main class="main-column">
+<div class="image-wrapper">
+  <img src="/images/塞尔达无双 灾厄启示录/aa0862d65c82a390162f64b244cfe2b0.jpg" data-src="/images/塞尔达无双 灾厄启示录/aa0862d65c82a390162f64b244cfe2b0.jpg"
+    srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+    class="image lozad">
+</div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      海拉尔无双：灾厄默示录 通关评测
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2020-11-30T00:00:00.000Z" style="display: flex; align-items: center;">
+      <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+      <span>2020-11-30</span>
+    </time>
+    
+    <span class="dot"></span>
+    
+    <a href="/categories/游戏/" class="post-meta-link">游戏</a>
+    
+    
+    
+    <span class="dot"></span>
+    <span>749 字</span>
+    
+  </div>
+  
+  <div class="post-meta post-show-meta" style="margin-top: -10px;">
+    <div style="display: flex; align-items: center;">
+      <i class="iconfont icon-biaoqian" style="margin-right: 2px; font-size: 1.15rem;"></i>
+      
+      
+        <a href="/tags/评测/" class="post-meta-link">评测</a>
+      
+      
+      <span class="dot"></span>
+      
+        <a href="/tags/Switch/" class="post-meta-link">Switch</a>
+      
+      
+      <span class="dot"></span>
+      
+        <a href="/tags/塞尔达/" class="post-meta-link">塞尔达</a>
+      
+      
+      <span class="dot"></span>
+      
+        <a href="/tags/无双/" class="post-meta-link">无双</a>
+      
+    </div>
+  </div>
+  
+  </header>
+  <div id="section" class="post-content">
+    <p>1、注意！这是无双！光荣做的，和老任第一方塞尔达有本质区别<br>2、主线流程比想象中的要短，大战役一共20个，而且战役之间时间跨度略大，剧情连贯性不太强<br>3、可用人物比预期的要多，基本上都是熟悉的面孔，通关后还有追加，如果有后续更新可能还有新人物<br>4、支线任务有150个左右，都是小关卡形式的，会有不同的人物限制或道具限制，有一些有意思的挑战关卡，平均通过时间5min左右<br>5、精英怪和Boss血量远大于杂兵，平砍基本等于刮痧，在部分攻击后会出现弱点槽，攻击清空弱点槽可以进行猛击，会对敌人造成巨大伤害<br>6、有盾反（带盾角色限定）和极限闪避（所有角色），两种行动成功后都会有大幅削减敌人弱点槽的机会<br>7、神兽战占比不大，爽快确实爽快，但是感觉有点形式大于意义<br>8、希卡石板的用法远没有想象中的那么多样，绝大部分时候用于反制精英怪<br>9、消耗道具分为三属性法杖和回血道具，法杖在一些限时关卡很好用，用好了可以一波清空Boss的弱点槽<br>10、可以割草&amp;砍树，会有虫子和木柴<br>11、各人物的连击解锁，血量上限提升，需要完成大地图上的素材收集任务，种类繁多<br>12、人物只有武器，而且各人物武器都是专用的，无法混用<br>13、武器有词条，可具有词条根据当前等级解锁，最多6条，同类型的词条会有套装效果，可以增强武器面板和词条属性，也是通关后刷刷刷的主要元素<br>14、武器等级初始20级，可突破两次上限，最高30级<br>15、通关前只有林克可以换装，换装只影响外观，没有其他属性，通关后解锁其他任务换装，可以换装成剧情中所有出现过的装扮<br>16、个人普通难度，每次主线过了都清完现有支线再进下一关主线，通关最高等级85级左右<br>17、人物等级可以花钱提升，但是不能超过所有人物中等级最高的</p>
+<p>以下是结论：<br>1、本质就是一个使用了塞尔达IP的无双游戏，还是无法和旷野之息对标<br>2、优化确实不咋地，掉帧比较严重，超频GPU后可基本全程30帧<br>3、非无双系列+塞尔达系列铁粉可以等骨折的时候再考虑购入，其他在犹豫的可以直接云一下剧情就好<br>4、剧透警告：剧情是if线，最后打赢了<br>5、活着的米法老婆，真香~</p>
+<p>以上!</p>
+
+  </div>
+  <div>
+  
+  <div class="post-note note-warning copyright" style="margin-top: 42px">
+    <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="https://foolish-pan.github.io/about">Foolish攀</a></p>
+    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="https://foolish-pan.github.io/posts/20792/">https://foolish-pan.github.io/posts/20792/</a></p>
+    <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！</p>
+  </div>
+  
+  </div>
+</article>
+<div class="nav">
+  
+  <div class="nav-item-prev">
+    <a href="/posts/8389/" class="nav-link">
+      <i class="iconfont icon-left nav-prev-icon"></i>
+      <div>
+        <div class="nav-label">上一篇</div>
+        
+        <div class="nav-title">怪物猎人崛起 初上手体验评测 </div>
+        
+      </div>
+    </a>
+  </div>
+  
+  
+  <div class="nav-item-next">
+    <a href="/posts/21996/" class="nav-link">
+      <div>
+        <div class="nav-label">下一篇</div>
+        
+        <div class="nav-title">天穗之咲稻姬 初上手评测 </div>
+        
+      </div>
+      <i class="iconfont icon-right nav-next-icon"></i>
+    </a>
+  </div>
+  
+</div>
+
+<div class="card card-content toc-card" id="mobiletoc">
+  <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+
+</div></main>
+          <aside class="left-column">
+            
+            <div class="card card-author">
+              
+<img src="/images/003.gif" class="author-img">
+
+<p class="author-name">Foolish攀</p>
+<p class="author-description">靠谱的中年技术宅男</p>
+<div class="author-message">
+  <a class="author-posts-count" href="/archives">
+    <span>22</span>
+    <span>文章</span>
+  </a>
+  <a class="author-categories-count" href="/categories">
+    <span>1</span>
+    <span>分类</span>
+  </a>
+  <a class="author-tags-count" href="/tags">
+    <span>21</span>
+    <span>标签</span>
+  </a>
+</div>
+
+            </div>
+            
+            <div class="sticky-tablet">
+  
+  
+  <article class="display-when-two-columns spacer">
+    <div class="card card-content toc-card">
+      <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+
+    </div>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="categories-card">
+  <div class="categories-header"><i class="iconfont icon-fenlei" style="padding-right: 2px;"></i>分类</div>
+  <div class="categories-list">
+    
+      <a href="/categories/游戏">
+        <div class="categories-list-item">
+          游戏
+          <span class="categories-list-item-badge">22</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content">
+    <div class="tags-card">
+  <div class="tags-header"><i class="iconfont icon-biaoqian" style="padding-right: 2px;"></i>热门标签</div>
+  <div class="tags-list">
+    
+    <a href="\tags\评测" title="评测"><div class="tags-list-item">评测</div></a>
+    
+    <a href="\tags\Switch" title="Switch"><div class="tags-list-item">Switch</div></a>
+    
+    <a href="\tags\PC" title="PC"><div class="tags-list-item">PC</div></a>
+    
+    <a href="\tags\银河城" title="银河城"><div class="tags-list-item">银河城</div></a>
+    
+    <a href="\tags\马里奥" title="马里奥"><div class="tags-list-item">马里奥</div></a>
+    
+    <a href="\tags\黑神话" title="黑神话"><div class="tags-list-item">黑神话</div></a>
+    
+    <a href="\tags\国产" title="国产"><div class="tags-list-item">国产</div></a>
+    
+    <a href="\tags\像素" title="像素"><div class="tags-list-item">像素</div></a>
+    
+    <a href="\tags\传说系列" title="传说系列"><div class="tags-list-item">传说系列</div></a>
+    
+    <a href="\tags\聚会" title="聚会"><div class="tags-list-item">聚会</div></a>
+    
+    <a href="\tags\火纹" title="火纹"><div class="tags-list-item">火纹</div></a>
+    
+    <a href="\tags\无双" title="无双"><div class="tags-list-item">无双</div></a>
+    
+    <a href="\tags\塞尔达" title="塞尔达"><div class="tags-list-item">塞尔达</div></a>
+    
+    <a href="\tags\卡比" title="卡比"><div class="tags-list-item">卡比</div></a>
+    
+    <a href="\tags\战神" title="战神"><div class="tags-list-item">战神</div></a>
+    
+    <a href="\tags\PS4" title="PS4"><div class="tags-list-item">PS4</div></a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+          <aside class="right-column">
+            <div class="sticky-widescreen">
+  
+  
+  <article class="card card-content toc-card">
+    <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header"><i class="iconfont icon-wenzhang_huaban" style="padding-right: 2px;"></i>最近文章</div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2024-09-01</div>
+        <a href="/posts/34123/"><div class="recent-posts-item-content">黑神话:悟空 通关+全成就 无剧透评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-05-29</div>
+        <a href="/posts/26312/"><div class="recent-posts-item-content">塞尔达传说：王国之泪 无剧透评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-01-30</div>
+        <a href="/posts/1919/"><div class="recent-posts-item-content">火焰纹章：结合 通关评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2022-11-27</div>
+        <a href="/posts/54965/"><div class="recent-posts-item-content">战神：诸神黄昏 白金通关评测</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>Copyright ©
+          
+          2020 -
+          
+          2024
+        </span>
+        <a href="/" class="footer-link">攀叔的万事屋 </a>
+      </div>
+    </div>
+
+    
+    <div class="footer-dsc">
+      
+      
+      Powered by
+      <a href="https://hexo.io/" class="footer-link" target="_blank" rel="nofollow noopener noreferrer">&nbsp;Hexo </a>
+      
+      
+      <span>&nbsp;|&nbsp;</span>
+      
+      
+      
+      Theme -
+      <a href="https://github.com/theme-kaze" class="footer-link" target="_blank"
+        rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
+      
+    </div>
+    
+    
+    
+    
+</footer>
+  <a role="button" id="scrollbutton" class="basebutton" >
+  <i class="iconfont icon-arrowleft button-icon"></i>
+</a>
+<a role="button" id="menubutton" class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a role="button" id="popbutton" class="basebutton">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a role="button" id="darkbutton" class="basebutton darkwidget">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+
+  
+  
+  
+  <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img');
+    var i;
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a');
+      wrapper.setAttribute('data-fslightbox', 'gallery');
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'));
+      wrapper.setAttribute('style', 'width: 100%; display: flex; justify-content: center;');
+      img[i].parentElement.insertBefore(wrapper, img[i]);
+      wrapper.appendChild(img[i]);
+    }
+    refreshFsLightbox();
+  }
+</script>
+<script>loadScript("//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js", addImgLayout)</script>
+  
+  
+  
+<script src="/js/main.js"></script>
+
+  
+  
+  <script>
+    var addLazyload = function () {
+      var observer = lozad('.lozad', {
+        load: function (el) {
+          el.srcset = el.getAttribute('data-src');
+        },
+        loaded: function (el) {
+          el.classList.add('loaded');
+        }
+      });
+      observer.observe();
+    }
+  </script>
+  <script>loadScript("/js/lib/lozad.min.js", addLazyload)</script>
+  
+  
+</body>
+
+</html>

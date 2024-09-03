@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<meta  lang="zh-CN" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#fff" id="theme-color">
+  <link rel="icon" href="/images/005.png">
+  <title>攀叔的万事屋</title>
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      return setting;
+    };
+    // apply current darkmode setting
+    var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      if(setting === getCssMediaQuery()) {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else if(reverseDarkList[setting]) {
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+      }
+    };
+    setDarkmode();
+  </script>
+  <script>
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  </script>
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  
+  <link rel="preload" href="//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js" as="script">
+  
+  
+  <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  <div class="wrapper">
+    
+    <nav class="navbar">
+  <div class="navbar-logo">
+    <span class="navbar-logo-main">
+      
+      <img class="navbar-logo-img" src="/images/005.png">
+      
+      <span class="navbar-logo-dsc">攀叔的万事屋</span>
+    </span>
+  </div>
+  <div class="navbar-menu">
+    
+    <a href="/" class="navbar-menu-item">首页 </a>
+    
+    <a href="/archives" class="navbar-menu-item">归档 </a>
+    
+    <a href="/tags" class="navbar-menu-item">标签 </a>
+    
+    <a href="/categories" class="navbar-menu-item">分类 </a>
+    
+    <a href="/about" class="navbar-menu-item">关于 </a>
+    
+    <a href="/links" class="navbar-menu-item">友链 </a>
+    
+    <a class="navbar-menu-item darknavbar" id="dark"><i class="iconfont icon-weather"></i></a>
+  </div>
+</nav>
+    
+    <div class="section-wrap">
+      <div class="container">
+        <div class="columns">
+          <main class="main-column">
+<div class="image-wrapper">
+  <img src="/images/黑神话悟空/Snipaste_2024-09-01_15-33-23.png" data-src="/images/黑神话悟空/Snipaste_2024-09-01_15-33-23.png"
+    srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+    class="image lozad">
+</div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      黑神话:悟空 通关+全成就 无剧透评测
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2024-09-01T14:56:25.000Z" style="display: flex; align-items: center;">
+      <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+      <span>2024-09-01</span>
+    </time>
+    
+    <span class="dot"></span>
+    
+    <a href="/categories/游戏/" class="post-meta-link">游戏</a>
+    
+    
+    
+    <span class="dot"></span>
+    <span>4.2k 字</span>
+    
+  </div>
+  
+  <div class="post-meta post-show-meta" style="margin-top: -10px;">
+    <div style="display: flex; align-items: center;">
+      <i class="iconfont icon-biaoqian" style="margin-right: 2px; font-size: 1.15rem;"></i>
+      
+      
+        <a href="/tags/评测/" class="post-meta-link">评测</a>
+      
+      
+      <span class="dot"></span>
+      
+        <a href="/tags/PC/" class="post-meta-link">PC</a>
+      
+      
+      <span class="dot"></span>
+      
+        <a href="/tags/国产/" class="post-meta-link">国产</a>
+      
+      
+      <span class="dot"></span>
+      
+        <a href="/tags/黑神话/" class="post-meta-link">黑神话</a>
+      
+    </div>
+  </div>
+  
+  </header>
+  <div id="section" class="post-content">
+    <h4 id="目前游玩进度"><a href="#目前游玩进度" class="headerlink" title="目前游玩进度"></a>目前游玩进度</h4><ol>
+<li><p>游戏时间68.2h，已达成全成就</p>
+</li>
+<li><p>目前停留在二周目的第五回打完隐藏图，应该是理论最快可以达成全成就的点</p>
+<p><img src="/images/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA/Snipaste_2024-09-02_16-27-44.png" alt="全成就" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA/Snipaste_2024-09-02_16-27-44.png" class="lozad post-image"></p>
+</li>
+</ol>
+<h4 id="基础系统"><a href="#基础系统" class="headerlink" title="基础系统"></a>基础系统</h4><ol>
+<li>角色有等级机制，击败敌人可以获取经验提升等级，但是等级并不提升属性，每升一级可以获取一个技能点，可以通过技能点进行强化角色的性能</li>
+<li>土地庙是存档点，可以进行调息，调息之后可以恢复状态和葫芦的使用次数，也会刷新怪物，但是精英怪物和一些守着存档点的怪物并不会刷新</li>
+<li>土地庙也可以进行装备的锻造和买卖物品材料，以及获取一些流程中遗漏的精魄，另外法术的整备和精魄的强化也需要在土地庙进行</li>
+<li>土地庙售卖的东西是限量的，不同地图售卖的东西是独立的，建议每次到了新地图，可以先看有没有新东西买</li>
+<li>随着流程会解锁一些功能性的NPC，可以对装备、葫芦、酒等物品进行强化</li>
+<li>每个关卡都有不同数量的打坐蒲团，也是收集要素之一，初次找到进行交互可以打坐欣赏周边的风景并获取一个额外的技能点，多周目无法重复获取</li>
+<li>游戏的基础货币叫灵蕴，可以通过各种途径获取，一周目如果不刷的话，后期做装备的时候还是有点缺的</li>
+<li>多周目可以继承除了任务关键道具以外的所有状态和道具，而且多周目敌人会变强掉落的金币和经验也会变多</li>
+<li>地图很大，但没有地图！没有地图！没有地图！有时候打完一个怪直接方向就乱了，有一些场景参照物也比较难找，非常容易迷路</li>
+</ol>
+<h4 id="如意金箍棒，重一万三千五百斤"><a href="#如意金箍棒，重一万三千五百斤" class="headerlink" title="如意金箍棒，重一万三千五百斤"></a>如意金箍棒，重一万三千五百斤</h4><ol>
+<li><p>物理攻击主要是三种棍法，初始只有劈棍一种，立辊和戳棍需要使用技能点进行学习</p>
+</li>
+<li><p>普通攻击打中敌人可以积攒棍势，也可以长按重攻击进行蓄力或解锁其他动作进行积攒，可以消耗棍势释放高伤害的蓄力攻击</p>
+</li>
+<li><p>棍势上限初始只有一点，根据棍法技能树的解锁等级会增加，最多3+1级，+1的棍势积攒后，在一段时间不命中敌人时会逐渐下降（有点像怪猎太刀的气刃），后期有套装装备可以把棍式突破到4+1，还可以防止+1的棍势自然下降，配合起来可以使用超强的蓄力攻击</p>
+</li>
+<li><p>轻攻击可以进行连段，在技能树可以进行强化，由于游戏是有预输入的，强烈建议攻击要一下下按，不要狂按轻攻击键</p>
+</li>
+<li><p>在轻攻击除最后一段的其他所有连段后，都可以按重攻击消耗棍势释放不同棍法的切手技，不同棍法的切手技连段和蓄力攻击性能各不相同</p>
+<p><strong>劈棍</strong>：个人在流程中使用最多的一种，主打近身缠斗，切手技在合适的时机使用可以有识破对手攻击的效果，识破攻击之后可以极高概率可以将敌人打出硬直，进一步解锁技能之后，还可以强力追击。而且如果识破成功，追击是不消耗棍势的，相当于消耗一级棍势打出两段蓄力伤害。然而第二段追击没有无敌判定，对付一些攻击节奏比较快的敌人的时候容易换血。另外，劈棍的蓄力攻击也是三种棍式中伤害最高的。</p>
+<p><strong>立辊</strong>：比较安逸的一种棍势，主打蓄力后一击脱离，有三种棍法中最好的对空能力。由于这游戏的跳跃手感比较迷惑，在躲避地面冲击波类型的伤害时非常好用。但是相对的，如果敌人有比较强的对空能力，很容易上棍之后被拍下来。切手技上棍之后可以转转乐，但是没有无敌判定，个人在流程中使用较少。</p>
+<p><strong>戳棍</strong>：走位灵活，进退自如，对付一些喜欢横冲直撞的敌人比较好用（停车专用），蓄力攻击距离也是三种棍法里面最长的。切手技在打出之后，可以派生搅阵，可以一直持续，对付一些硬直比较低的Boss会有奇效。</p>
+</li>
+<li><p>除了三种棍法，还有一种特殊棍法：棍花，可以用来防御敌人的飞行道具攻击。由于攻击频率特别高，也可以用来积攒一些和攻击次数相关或者暴击相关的资源，达成一些特殊的打法。</p>
+<p><img src="/images/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA/Snipaste_2024-09-02_21-32-11.png" alt="技能树" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA/Snipaste_2024-09-02_21-32-11.png" class="lozad post-image"></p>
+</li>
+</ol>
+<h4 id="法术灵宝，各显神通"><a href="#法术灵宝，各显神通" class="headerlink" title="法术灵宝，各显神通"></a>法术灵宝，各显神通</h4><ol>
+<li><p>法术一共有四类，每种对应一个技能位，可以在土地庙进行整备，选择需要多携带的法术。释放时消耗法力，但是这个游戏中，战斗中回复法术的手段非常少，所以需要做好规划使用。</p>
+<p><strong>奇术</strong>：战斗中的一些辅助法术，定身法可以控场，用来回复或者进行蓄力输出，个人认为是几种奇术之中最实用的。安身法属于场地效果，在一些场地位置固定或者没有多动症的Boss战中会很好用。禁字法是Ban掉自己的所有法术，换来攻击力提升，属于特殊情况下的打法，估计后面会有不少大佬在速通时会经常使用</p>
+<p><strong>身法</strong>：主要用于化解敌人的攻击，聚形散气可以分散敌人的仇恨，进行走位和恢复，铜头铁臂就是标准的弹反技能，比较吃操作，弹反不成功是会被罚站的，而且敌人的强力攻击是无法弹反的</p>
+<p><strong>毫毛</strong>：身外身法，召唤小弟进行群殴，小弟在强化之后还是挺厉害的，只是不怎么会躲伤害，但是这个法术是消耗最大的，一场战斗用不了几次。二周目开始还会解锁一个救命毫毛的被动法术，可以原地复活一次。</p>
+<p><strong>变化</strong>：花样最多的法术，全部收集一共有十种，每种变化都有自己的特点，对应不同的属性抗性，而且变化之后的血条是独立的，消耗之后只会变回去，在攻略Boss的时候使用，有时候会有奇效。另外，每种变化对应的强化增益是常驻被动，并不是装备了这种变化之后才会生效的，建议加点的时候可以有针对性的进行强化。</p>
+</li>
+<li><p>比较可惜的是法术对应的技能位是固定的，每种只能携带一个，如果可以同类携带多个同类法术，打法应该会更加丰富</p>
+</li>
+<li><p>精魄属于可以使用敌人的一部分能力，开始是没法收集的，需要主线推进之后才可以收集，不过游戏也很人性化的给了防止遗漏的机制，如果已经出现的精魄没有收集，可以在任意土地庙进行拾遗</p>
+</li>
+<li><p>精魄可以在土地庙消耗灵蕴进行升级，一些特殊的精魄还需要专门的材料，升级之后精魄的性能和属性加成都会提升</p>
+</li>
+<li><p>一般怪物的精魄获不是普通怪物随机掉落，而是需要打败固定地点出现的强化版精英怪物，这一点有点类似之前接触过的一款游戏《终末的莉莉丝》，精英怪物没有独立的外观和图鉴，就是普通怪物身上有蓝色的火焰</p>
+</li>
+<li><p>法宝大部分都是在每个关卡的隐藏地图击败Boss获取，会针对当前关卡的最终Boss有克制关系，可以较大程度降低Boss战的难度，而且每个Boss的克制法宝都是遵循原作的，如果感觉Boss战难度较大，可以转而去寻找对应的克制法宝</p>
+</li>
+<li><p>精魄技能和法宝的释放都需要消耗元气，而且两个是独立积攒的，积攒满了就可以释放，精魄对应的说明里有消耗元气的量，消耗量越高的积攒越慢</p>
+</li>
+<li><p>根器对应每一大关的主题，通过每大关解锁一个，每个根器有三项强力的被动技能，可以选择一个进行解锁，多周目可以全部解锁，据说全根器全解锁之后还有额外的附加效果</p>
+</li>
+</ol>
+<h4 id="人靠衣裳马靠鞍，猴也是"><a href="#人靠衣裳马靠鞍，猴也是" class="headerlink" title="人靠衣裳马靠鞍，猴也是"></a>人靠衣裳马靠鞍，猴也是</h4><ol>
+<li>武器和防具可以在土地庙进行锻造，对应的锻造需要拿到关键素材才会解锁</li>
+<li>部分武器有强化树，可以在同一个强化树上任意切换锻造，但是！是需要消耗材料和灵蕴的······</li>
+<li>防具大部分都有套装效果，中期可以解锁防具的品级强化，强化之后可以提升防具的基础属性，部分防具强化到最高品级外观还会发生变化，而且会追加套装属性，但是每周目给的材料是有效的，目测每周目给的材料大约可以升级满两套防具</li>
+<li>珍玩相当于饰品，初始只有两个，中期挑战对应Boss后可以加一个，每周目可以增加一次，上限是五个</li>
+<li>珍玩的获取需要通过宝箱固定获取，有一部分需要通过NPC购买，或击败敌人掉落，一些珍玩可以获取多个，无法获取多个的或超出获取上限的会转换成灵蕴</li>
+<li>可惜的是珍玩之间的联动不是很多，只有少量的珍玩有组合效果，更多的都是属性的提升或者提供新的性能</li>
+<li>葫芦是最主要的回复道具，由葫芦、酒、泡酒物三部分组成，葫芦决定了回复次数，部分葫芦可以通过强化增加回复次数，不同的葫芦也有不同的附加效果。酒更多的决定了回复量和可容纳的泡酒物数量，可以通过强化提升。泡酒物就是给回复附加效果，可以通过宝箱、采集、击败敌人获取</li>
+<li>葫芦的使用次数可以在土地庙可以进行回复，也可以在用葫芦吸收精魄的时候回复，有个小技巧就是在吸收精魄之前，如果不是满血，可以先喝一口再吸收精魄</li>
+<li>丹药分天上仙丹和人间丹药两种，仙丹是对角色的部分属性进行永久强化（有次数上限），需要消耗玲珑内丹在对应的NPC处进行炼制，玲珑内丹可以通过击败精英敌人或者固定宝箱获取，已经进行的强化也可以随时进行洗点。</li>
+<li>人间丹药就是消耗品，主要用来提供一些Buff，或者解除Debuff，不同种类的丹药有携带上限，多出的部分会存在土地庙里。丹药的炼制需要拿到对应的丹方，在土地庙和NPC都可以消耗材料进行炼制</li>
+<li>每个关卡还会有固定的三个丹药获取，可以强化生命、法力和体力，二周目如果再次开启已经获取的丹药宝箱会自动转换为灵蕴，无法重复获取</li>
+<li>材料分为装备材料和丹药材料两种，装备材料又分为专材和通材，一般装备解锁都需要拿到对应的专材，武器的同强化树转化时专材会返还，但是已经消耗的通材不会返还，而且高稀有度的通材在每周目的获取数量也是有限的，需要谨慎使用</li>
+<li>丹药材料可以通过采集获取，采集点的刷新和现实时间挂钩，体感大约要半小时左右刷新一次，可以通过修改系统时间和刷档的方式进行快速刷新。采集时一定概率可以拿到种子，中期可以交付给NPC进行种植，然后就可以定期收菜了</li>
+</ol>
+<h4 id="美术和剧情"><a href="#美术和剧情" class="headerlink" title="美术和剧情"></a>美术和剧情</h4><ol>
+<li><p>这游戏的美术是没的说的，各种环境、景物、任务都十分考究，随着游戏的出圈，也带火了对应的取景地的旅游</p>
+</li>
+<li><p>游戏还附带了拍照模式，有各种滤镜选项，可以拍出许多漂亮的照片（当然也可以整活）</p>
+</li>
+<li><p>每个关卡的土地庙甚至都有符合关卡主题的设计</p>
+</li>
+<li><p>人物（妖怪）设定上能看出游戏开发的用心，在战斗时还会根据角色使用的招式和变身有不同的对话菜单</p>
+</li>
+<li><p>女性角色每个都很漂亮，而且各有各的漂亮~</p>
+</li>
+<li><p>剧情上如果只推主线能得到的信息有限，有很强的谜语人感觉。大量的附加信息分散在了支线、隐藏地图、影神图甚至战斗对话中，特别是影神图，强烈推荐解锁影神图之后去看一下里面的怪物或人物的故事，会有很多补充信息，也能更好的梳理清楚角色之间的关系</p>
+</li>
+<li><p>每一章结束之后，都有一个不同美术风格的小短片，结合每一章的主题内容，信息量爆炸</p>
+</li>
+<li><p>目前游戏有两个结局，一周目可以全部达成，真结局的条件是解锁全部隐藏地图后打完隐藏Boss再去打最终Boss，反之就是普通结局</p>
+</li>
+<li><p>有些遗憾的是一些分支剧情没有交代的特别清楚，包括真结局的后续也是，希望后续能有DLC进行补充</p>
+<p><img src="/images/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA/Snipaste_2024-09-02_21-35-00.png" alt="土地庙" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/%E9%BB%91%E7%A5%9E%E8%AF%9D%E6%82%9F%E7%A9%BA/Snipaste_2024-09-02_21-35-00.png" class="lozad post-image"></p>
+</li>
+</ol>
+<h4 id="成就和收集"><a href="#成就和收集" class="headerlink" title="成就和收集"></a>成就和收集</h4><ol>
+<li>一共八十一和成就，对应了九九八十一难，整体成就的解锁顺序是和游玩顺序挂钩的，如果打完一章之后发现中间有成就没解锁，基本上就是遗漏某个关键的Boss或收集</li>
+<li>有几个全收集的成就完成起来还是有点麻烦的，特别是需要刷采集点的，群里小老弟在收集种子的时候光摸采集点摸了8个小时</li>
+<li>有部分道具或者装备的锻造素材需要二周目才会解锁或收集够，这也是开篇说的，理论最快全成就的节点是二周目的第五章</li>
+</ol>
+<h4 id="最后再来聊聊游戏的内容"><a href="#最后再来聊聊游戏的内容" class="headerlink" title="最后再来聊聊游戏的内容"></a>最后再来聊聊游戏的内容</h4><ol>
+<li><p>发售前群里讨论黑神话的时候，更倾向于把游戏类型归为类魂or类只狼、</p>
+</li>
+<li><p>发售后实际体验下来，游戏应该属于标准的ARPG，有完整的等级机制，技能树，装备体系，只是包含了很弱的魂类游戏的特征</p>
+</li>
+<li><p>虽然有RPG要素，但这游戏绝大部分内容还都是动作类型的战斗，后期有部分Boss可以一套连招直接把主角带走，不太接触动作游戏的还是有一定难度的</p>
+</li>
+<li><p>关卡的内容一到四章递增，第五章和第六章又有所下降，而且后面两关的地图设计，会有一些赶工的感觉，不过总体游戏的内容是非常充足的</p>
+</li>
+<li><p>由于游戏大出圈，现在也有不少对于游戏剧情内容的各种说法，个人感觉理性看待就好，大家都是在做阅读理解而已，观点不同很正常</p>
+</li>
+</ol>
+<h4 id="结篇写点主观的"><a href="#结篇写点主观的" class="headerlink" title="结篇写点主观的"></a>结篇写点主观的</h4><p>​    游戏解禁后，一个朋友说国产稳了，不过我个人觉得目前还是早了，因为这等品质的游戏，人力和资金固然占据了关键的要素，还需要明确的方向和坚定的精神。之前看到的一个采访里说：踏上取经路比到达灵山更重要。所有人都知道“真经”就在那里，但也都知道路途遥远坎坷，愿意踏上“取经路”的屈指可数，能坚持到达灵山的就更少了。希望之后国内的会出现更多愿意踏上取经路的人吧，也希望能取的真经的游戏越来越多~</p>
+<p>​    毕竟天庭三大反骨才做了一个不是嘛~</p>
+
+  </div>
+  <div>
+  
+  <div class="post-note note-warning copyright" style="margin-top: 42px">
+    <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="https://foolish-pan.github.io/about">Foolish攀</a></p>
+    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="https://foolish-pan.github.io/posts/34123/">https://foolish-pan.github.io/posts/34123/</a></p>
+    <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！</p>
+  </div>
+  
+  </div>
+</article>
+<div class="nav">
+  
+  
+  <div class="nav-item-next">
+    <a href="/posts/26312/" class="nav-link">
+      <div>
+        <div class="nav-label">下一篇</div>
+        
+        <div class="nav-title">塞尔达传说：王国之泪 无剧透评测 </div>
+        
+      </div>
+      <i class="iconfont icon-right nav-next-icon"></i>
+    </a>
+  </div>
+  
+</div>
+
+<div class="card card-content toc-card" id="mobiletoc">
+  <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%AE%E5%89%8D%E6%B8%B8%E7%8E%A9%E8%BF%9B%E5%BA%A6"><span class="toc-text">目前游玩进度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%B3%BB%E7%BB%9F"><span class="toc-text">基础系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E6%84%8F%E9%87%91%E7%AE%8D%E6%A3%92%EF%BC%8C%E9%87%8D%E4%B8%80%E4%B8%87%E4%B8%89%E5%8D%83%E4%BA%94%E7%99%BE%E6%96%A4"><span class="toc-text">如意金箍棒，重一万三千五百斤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%95%E6%9C%AF%E7%81%B5%E5%AE%9D%EF%BC%8C%E5%90%84%E6%98%BE%E7%A5%9E%E9%80%9A"><span class="toc-text">法术灵宝，各显神通</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%BA%E9%9D%A0%E8%A1%A3%E8%A3%B3%E9%A9%AC%E9%9D%A0%E9%9E%8D%EF%BC%8C%E7%8C%B4%E4%B9%9F%E6%98%AF"><span class="toc-text">人靠衣裳马靠鞍，猴也是</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BE%8E%E6%9C%AF%E5%92%8C%E5%89%A7%E6%83%85"><span class="toc-text">美术和剧情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%90%E5%B0%B1%E5%92%8C%E6%94%B6%E9%9B%86"><span class="toc-text">成就和收集</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E5%86%8D%E6%9D%A5%E8%81%8A%E8%81%8A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-text">最后再来聊聊游戏的内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%93%E7%AF%87%E5%86%99%E7%82%B9%E4%B8%BB%E8%A7%82%E7%9A%84"><span class="toc-text">结篇写点主观的</span></a></li></ol>
+</div></main>
+          <aside class="left-column">
+            
+            <div class="card card-author">
+              
+<img src="/images/003.gif" class="author-img">
+
+<p class="author-name">Foolish攀</p>
+<p class="author-description">靠谱的中年技术宅男</p>
+<div class="author-message">
+  <a class="author-posts-count" href="/archives">
+    <span>22</span>
+    <span>文章</span>
+  </a>
+  <a class="author-categories-count" href="/categories">
+    <span>1</span>
+    <span>分类</span>
+  </a>
+  <a class="author-tags-count" href="/tags">
+    <span>21</span>
+    <span>标签</span>
+  </a>
+</div>
+
+            </div>
+            
+            <div class="sticky-tablet">
+  
+  
+  <article class="display-when-two-columns spacer">
+    <div class="card card-content toc-card">
+      <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%AE%E5%89%8D%E6%B8%B8%E7%8E%A9%E8%BF%9B%E5%BA%A6"><span class="toc-text">目前游玩进度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%B3%BB%E7%BB%9F"><span class="toc-text">基础系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E6%84%8F%E9%87%91%E7%AE%8D%E6%A3%92%EF%BC%8C%E9%87%8D%E4%B8%80%E4%B8%87%E4%B8%89%E5%8D%83%E4%BA%94%E7%99%BE%E6%96%A4"><span class="toc-text">如意金箍棒，重一万三千五百斤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%95%E6%9C%AF%E7%81%B5%E5%AE%9D%EF%BC%8C%E5%90%84%E6%98%BE%E7%A5%9E%E9%80%9A"><span class="toc-text">法术灵宝，各显神通</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%BA%E9%9D%A0%E8%A1%A3%E8%A3%B3%E9%A9%AC%E9%9D%A0%E9%9E%8D%EF%BC%8C%E7%8C%B4%E4%B9%9F%E6%98%AF"><span class="toc-text">人靠衣裳马靠鞍，猴也是</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BE%8E%E6%9C%AF%E5%92%8C%E5%89%A7%E6%83%85"><span class="toc-text">美术和剧情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%90%E5%B0%B1%E5%92%8C%E6%94%B6%E9%9B%86"><span class="toc-text">成就和收集</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E5%86%8D%E6%9D%A5%E8%81%8A%E8%81%8A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-text">最后再来聊聊游戏的内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%93%E7%AF%87%E5%86%99%E7%82%B9%E4%B8%BB%E8%A7%82%E7%9A%84"><span class="toc-text">结篇写点主观的</span></a></li></ol>
+    </div>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="categories-card">
+  <div class="categories-header"><i class="iconfont icon-fenlei" style="padding-right: 2px;"></i>分类</div>
+  <div class="categories-list">
+    
+      <a href="/categories/游戏">
+        <div class="categories-list-item">
+          游戏
+          <span class="categories-list-item-badge">22</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content">
+    <div class="tags-card">
+  <div class="tags-header"><i class="iconfont icon-biaoqian" style="padding-right: 2px;"></i>热门标签</div>
+  <div class="tags-list">
+    
+    <a href="\tags\评测" title="评测"><div class="tags-list-item">评测</div></a>
+    
+    <a href="\tags\Switch" title="Switch"><div class="tags-list-item">Switch</div></a>
+    
+    <a href="\tags\PC" title="PC"><div class="tags-list-item">PC</div></a>
+    
+    <a href="\tags\银河城" title="银河城"><div class="tags-list-item">银河城</div></a>
+    
+    <a href="\tags\马里奥" title="马里奥"><div class="tags-list-item">马里奥</div></a>
+    
+    <a href="\tags\黑神话" title="黑神话"><div class="tags-list-item">黑神话</div></a>
+    
+    <a href="\tags\国产" title="国产"><div class="tags-list-item">国产</div></a>
+    
+    <a href="\tags\像素" title="像素"><div class="tags-list-item">像素</div></a>
+    
+    <a href="\tags\传说系列" title="传说系列"><div class="tags-list-item">传说系列</div></a>
+    
+    <a href="\tags\聚会" title="聚会"><div class="tags-list-item">聚会</div></a>
+    
+    <a href="\tags\火纹" title="火纹"><div class="tags-list-item">火纹</div></a>
+    
+    <a href="\tags\无双" title="无双"><div class="tags-list-item">无双</div></a>
+    
+    <a href="\tags\塞尔达" title="塞尔达"><div class="tags-list-item">塞尔达</div></a>
+    
+    <a href="\tags\卡比" title="卡比"><div class="tags-list-item">卡比</div></a>
+    
+    <a href="\tags\战神" title="战神"><div class="tags-list-item">战神</div></a>
+    
+    <a href="\tags\PS4" title="PS4"><div class="tags-list-item">PS4</div></a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+          <aside class="right-column">
+            <div class="sticky-widescreen">
+  
+  
+  <article class="card card-content toc-card">
+    <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%AE%E5%89%8D%E6%B8%B8%E7%8E%A9%E8%BF%9B%E5%BA%A6"><span class="toc-text">目前游玩进度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%B3%BB%E7%BB%9F"><span class="toc-text">基础系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A6%82%E6%84%8F%E9%87%91%E7%AE%8D%E6%A3%92%EF%BC%8C%E9%87%8D%E4%B8%80%E4%B8%87%E4%B8%89%E5%8D%83%E4%BA%94%E7%99%BE%E6%96%A4"><span class="toc-text">如意金箍棒，重一万三千五百斤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%95%E6%9C%AF%E7%81%B5%E5%AE%9D%EF%BC%8C%E5%90%84%E6%98%BE%E7%A5%9E%E9%80%9A"><span class="toc-text">法术灵宝，各显神通</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%BA%E9%9D%A0%E8%A1%A3%E8%A3%B3%E9%A9%AC%E9%9D%A0%E9%9E%8D%EF%BC%8C%E7%8C%B4%E4%B9%9F%E6%98%AF"><span class="toc-text">人靠衣裳马靠鞍，猴也是</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BE%8E%E6%9C%AF%E5%92%8C%E5%89%A7%E6%83%85"><span class="toc-text">美术和剧情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%90%E5%B0%B1%E5%92%8C%E6%94%B6%E9%9B%86"><span class="toc-text">成就和收集</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E5%86%8D%E6%9D%A5%E8%81%8A%E8%81%8A%E6%B8%B8%E6%88%8F%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-text">最后再来聊聊游戏的内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%93%E7%AF%87%E5%86%99%E7%82%B9%E4%B8%BB%E8%A7%82%E7%9A%84"><span class="toc-text">结篇写点主观的</span></a></li></ol>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header"><i class="iconfont icon-wenzhang_huaban" style="padding-right: 2px;"></i>最近文章</div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2024-09-01</div>
+        <a href="/posts/34123/"><div class="recent-posts-item-content">黑神话:悟空 通关+全成就 无剧透评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-05-29</div>
+        <a href="/posts/26312/"><div class="recent-posts-item-content">塞尔达传说：王国之泪 无剧透评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-01-30</div>
+        <a href="/posts/1919/"><div class="recent-posts-item-content">火焰纹章：结合 通关评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2022-11-27</div>
+        <a href="/posts/54965/"><div class="recent-posts-item-content">战神：诸神黄昏 白金通关评测</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>Copyright ©
+          
+          2020 -
+          
+          2024
+        </span>
+        <a href="/" class="footer-link">攀叔的万事屋 </a>
+      </div>
+    </div>
+
+    
+    <div class="footer-dsc">
+      
+      
+      Powered by
+      <a href="https://hexo.io/" class="footer-link" target="_blank" rel="nofollow noopener noreferrer">&nbsp;Hexo </a>
+      
+      
+      <span>&nbsp;|&nbsp;</span>
+      
+      
+      
+      Theme -
+      <a href="https://github.com/theme-kaze" class="footer-link" target="_blank"
+        rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
+      
+    </div>
+    
+    
+    
+    
+</footer>
+  <a role="button" id="scrollbutton" class="basebutton" >
+  <i class="iconfont icon-arrowleft button-icon"></i>
+</a>
+<a role="button" id="menubutton" class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a role="button" id="popbutton" class="basebutton">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a role="button" id="darkbutton" class="basebutton darkwidget">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+
+  
+  
+  
+  <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img');
+    var i;
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a');
+      wrapper.setAttribute('data-fslightbox', 'gallery');
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'));
+      wrapper.setAttribute('style', 'width: 100%; display: flex; justify-content: center;');
+      img[i].parentElement.insertBefore(wrapper, img[i]);
+      wrapper.appendChild(img[i]);
+    }
+    refreshFsLightbox();
+  }
+</script>
+<script>loadScript("//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js", addImgLayout)</script>
+  
+  
+  
+<script src="/js/main.js"></script>
+
+  
+  
+  <script>
+    var addLazyload = function () {
+      var observer = lozad('.lozad', {
+        load: function (el) {
+          el.srcset = el.getAttribute('data-src');
+        },
+        loaded: function (el) {
+          el.classList.add('loaded');
+        }
+      });
+      observer.observe();
+    }
+  </script>
+  <script>loadScript("/js/lib/lozad.min.js", addLazyload)</script>
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<meta  lang="zh-CN" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#fff" id="theme-color">
+  <link rel="icon" href="/images/005.png">
+  <title>攀叔的万事屋</title>
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      return setting;
+    };
+    // apply current darkmode setting
+    var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      if(setting === getCssMediaQuery()) {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else if(reverseDarkList[setting]) {
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+      }
+    };
+    setDarkmode();
+  </script>
+  <script>
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  </script>
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  
+  <link rel="preload" href="//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js" as="script">
+  
+  
+  <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  <div class="wrapper">
+    
+    <nav class="navbar">
+  <div class="navbar-logo">
+    <span class="navbar-logo-main">
+      
+      <img class="navbar-logo-img" src="/images/005.png">
+      
+      <span class="navbar-logo-dsc">攀叔的万事屋</span>
+    </span>
+  </div>
+  <div class="navbar-menu">
+    
+    <a href="/" class="navbar-menu-item">首页 </a>
+    
+    <a href="/archives" class="navbar-menu-item">归档 </a>
+    
+    <a href="/tags" class="navbar-menu-item">标签 </a>
+    
+    <a href="/categories" class="navbar-menu-item">分类 </a>
+    
+    <a href="/about" class="navbar-menu-item">关于 </a>
+    
+    <a href="/links" class="navbar-menu-item">友链 </a>
+    
+    <a class="navbar-menu-item darknavbar" id="dark"><i class="iconfont icon-weather"></i></a>
+  </div>
+</nav>
+    
+    <div class="section-wrap">
+      <div class="container">
+        <div class="columns">
+          <main class="main-column">
+<div class="image-wrapper">
+  <img src="/images/蓓优妮塔3/2022102910570500_s.jpg" data-src="/images/蓓优妮塔3/2022102910570500_s.jpg"
+    srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+    class="image lozad">
+</div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      蓓优妮塔3 通关评测
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2022-10-29T15:31:00.000Z" style="display: flex; align-items: center;">
+      <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+      <span>2022-10-29</span>
+    </time>
+    
+    <span class="dot"></span>
+    
+    <a href="/categories/游戏/" class="post-meta-link">游戏</a>
+    
+    
+    
+    <span class="dot"></span>
+    <span>1.5k 字</span>
+    
+  </div>
+  
+  <div class="post-meta post-show-meta" style="margin-top: -10px;">
+    <div style="display: flex; align-items: center;">
+      <i class="iconfont icon-biaoqian" style="margin-right: 2px; font-size: 1.15rem;"></i>
+      
+      
+        <a href="/tags/评测/" class="post-meta-link">评测</a>
+      
+      
+      <span class="dot"></span>
+      
+        <a href="/tags/Switch/" class="post-meta-link">Switch</a>
+      
+    </div>
+  </div>
+  
+  </header>
+  <div id="section" class="post-content">
+    <h5 id="游戏体验"><a href="#游戏体验" class="headerlink" title="游戏体验"></a>游戏体验</h5><ul>
+<li><p>目前普通难度一周目通关，全武器全魔兽收集</p>
+</li>
+<li><p>主机模式，过场动画30帧，战斗中在45-55帧范围内波动，整体还是流畅的</p>
+</li>
+</ul>
+<h5 id="游戏内容"><a href="#游戏内容" class="headerlink" title="游戏内容"></a>游戏内容</h5><ul>
+<li>游戏主要内容共2序章+14主线关+4横版潜入关+试炼关若干</li>
+<li>主线关卡每关游玩时长大约30-40分钟，如果追求全收集会更长</li>
+<li>每个主线关卡都有三个魔晶可以收集，收集齐了可以解锁对应主线关的试炼关卡，每个试炼关都有不同的规则，通关都有不同的奖励</li>
+<li>主线关和试炼关都有成就项，主线关5个，试炼关3个，一开始不会显示，通关关卡后会显示在关卡选择页面上，有些成就充分体验了制作人放飞自我的，比如召唤魔兽吓唬猫3次，追人的时候一不小心超过去····</li>
+<li>主线关的人物是固定的无法更换人物挑战，分贝姐关和薇欧拉关</li>
+<li>横版潜入（无双）关为贞德专属，穿插在主线关之间，全部通过后会在商店解锁像素小游戏，游玩需要花钱，根据选择的难度不同会有不同的奖励倍率</li>
+<li>试炼关和魔女挑战可以选择人物挑战</li>
+</ul>
+<h5 id="武器系统"><a href="#武器系统" class="headerlink" title="武器系统"></a>武器系统</h5><img src="/images/蓓优妮塔3/2022103012165800_s.jpg" alt="2022103012165800_s" style="zoom:50%;" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/蓓优妮塔3/2022103012165800_s.jpg" class="lozad post-image">
+
+<ul>
+<li><p>武器系统和前两作有很大改动，不再分手脚分开装备，拿到就是一套，装备上就是手脚一起的</p>
+</li>
+<li><p>目前全部武器共12种，大部分随主线剧情解锁，不像前两作还要收集天使唱片</p>
+</li>
+<li><p>如果有前两作的存档，商店里会售卖前两作的初始武器</p>
+</li>
+<li><p>隐藏武器一共三个，一个是通关后的14章试炼关解锁，一个是3章收集齐魔晶的隐藏试炼关解锁，还有一个是系列惯例999999在商店买白金券挑战罗丹胜利后解锁</p>
+</li>
+<li><p>每种武器对应贝姐的一种魔人化形态，在冲刺时可以通过魔人化的特殊能力来通过一些特殊地形，在战斗中也可以通过一些连击魔人化造成大量伤害</p>
+</li>
+<li><p>主线推进后可以解锁武器大招，随着战斗会逐渐积攒，攒满后同时按下左右摇杆魔人化后释放，可以对敌人造成大量伤害</p>
+</li>
+</ul>
+<h5 id="魔兽系统"><a href="#魔兽系统" class="headerlink" title="魔兽系统"></a>魔兽系统</h5><img src="/images/蓓优妮塔3/2022103012172800_s.jpg" alt="2022103012172800_s" style="zoom:50%;" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/蓓优妮塔3/2022103012172800_s.jpg" class="lozad post-image">
+
+<ul>
+<li>本作的一大特色系统是魔兽系统，随武器一起解锁，除两个前作武器之外，每种武器对应一种魔兽，魔兽可以消耗魔力召唤出来，并且手动操作，在一些战斗中会起到非常关键的作用</li>
+<li>主线略微推进后会解锁魔兽防反和魔兽追击的技能，可以用防反或者追击瞬间召唤魔兽对敌人造成巨大伤害</li>
+<li>魔兽在受到一定程度的攻击后会失控，会敌我不分，如果受到一些强力怪物的强力攻击会死亡，一段时间内无法再次召唤</li>
+<li>魔力不同于前作必须通过攻击命中积攒，会随着时间缓慢恢复，被打了会减少，发动魔女时间和攻击命中时会快速恢复</li>
+<li>每一章最后的Boss战会召唤剧情专用的特殊魔兽，演出十分惊喜和震撼，甚至都能感觉到制作人完全放飞自我的感觉，有巨大化怪兽对战，中式神话”文体两开花”，甚至还有······音游······</li>
+</ul>
+<blockquote>
+<p><strong>哥特风恶魔歌姬</strong></p>
+<table>
+<thead>
+<tr>
+<th><img src="/images/蓓优妮塔3/2022102820451300_s.jpg" alt="2022102820451300_s"  / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/蓓优妮塔3/2022102820451300_s.jpg" class="lozad post-image"></th>
+<th><img src="/images/蓓优妮塔3/2022102820451500_s.jpg" alt="2022102820451500_s"  / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/蓓优妮塔3/2022102820451500_s.jpg" class="lozad post-image"></th>
+</tr>
+</thead>
+</table>
+</blockquote>
+<h5 id="道具与收集"><a href="#道具与收集" class="headerlink" title="道具与收集"></a>道具与收集</h5><ul>
+<li>这次的货币分三种，光环：天使系敌人掉落，宝晶：恶魔系敌人掉落和连击点数奖励，胚胎结晶：人造系怪物掉落，分别用于不同的用途</li>
+<li>光环可以在商店购买特殊道具，化妆镜，模型收集，设定集画册收集。在关卡内的商店里还可以买到对应关卡的土特产，买了之后可以在选关界面看到。另外，这次的换装也是非常丰富的~</li>
+<li>宝晶相当于技能点，可以在菜单解锁武器动作和魔兽动作，如果不刻意刷，一周目能拿到的量只能点满几个武器和魔兽的技能，可以选择用着顺手的武器和魔兽优先使用</li>
+<li>胚胎结晶相当于前作的通用货币，用于买一些消耗品和饰品，买白金券的999999用的也是这个</li>
+<li>血上限和魔力上限这次不再是拿到对应道具后直接生效，而是要在技能页选择强化，贝姐和贞德共通，薇欧拉的独立</li>
+</ul>
+<h5 id="薇欧拉"><a href="#薇欧拉" class="headerlink" title="薇欧拉"></a>薇欧拉</h5><ul>
+<li>本作新人物，有独立武器和魔兽，均固定不可更换</li>
+<li>武器平A伤害比贝姐要高不少，触发魔女时间的方式不是闪避而是防反，上手需要适应一下··</li>
+<li>魔兽只有小柴猫一个，同样可以在连招中进行追击，不同的是召唤出来之后是自主攻击，召唤期间薇欧拉会变成空手攻击</li>
+<li>换装内容只有T恤有点可惜·····</li>
+</ul>
+<h5 id="关于剧情"><a href="#关于剧情" class="headerlink" title="关于剧情"></a>关于剧情</h5><ul>
+<li>本身不是啥侧重剧情的游戏，安心体验爽快的动作战斗就好，剧情可以当做添头~</li>
+<li>总结起来一句话，这次是反派捅了贝姐窝了·····</li>
+<li>反派出现频率比较高的一句台词：为什么你会出现在这里？！</li>
+<li>薇欧拉的身份开局就能猜出来，还遮遮掩掩一直到最后····</li>
+<li>结束语意味深长，To be continued in a new generation…</li>
+</ul>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><ul>
+<li>爽快的动作体验，惊喜的演出效果~</li>
+<li>各种贝姐的大长腿和尬舞~</li>
+<li>强烈建议补完前两作再游玩本作，还是有许多联系的，而且前两作也在不久前更新了官中</li>
+</ul>
+<blockquote>
+<p><strong>各种贝姐！</strong></p>
+<table>
+<thead>
+<tr>
+<th><img src="/images/%E8%93%93%E4%BC%98%E5%A6%AE%E5%A1%943/2022102910201000_s.jpg" alt="2022102910201000_s" srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/images/%E8%93%93%E4%BC%98%E5%A6%AE%E5%A1%943/2022102910201000_s.jpg" class="lozad post-image"></th>
+</tr>
+</thead>
+</table>
+</blockquote>
+
+  </div>
+  <div>
+  
+  <div class="post-note note-warning copyright" style="margin-top: 42px">
+    <p><span style="font-weight: bold;">作者：</span><a target="_blank" rel="nofollow noopener noreferrer" href="https://foolish-pan.github.io/about">Foolish攀</a></p>
+    <p><span style="font-weight: bold;">文章链接：</span><a target="_blank" rel="nofollow noopener noreferrer" href="https://foolish-pan.github.io/posts/841/">https://foolish-pan.github.io/posts/841/</a></p>
+    <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！</p>
+  </div>
+  
+  </div>
+</article>
+<div class="nav">
+  
+  <div class="nav-item-prev">
+    <a href="/posts/54965/" class="nav-link">
+      <i class="iconfont icon-left nav-prev-icon"></i>
+      <div>
+        <div class="nav-label">上一篇</div>
+        
+        <div class="nav-title">战神：诸神黄昏 白金通关评测 </div>
+        
+      </div>
+    </a>
+  </div>
+  
+  
+  <div class="nav-item-next">
+    <a href="/posts/32912/" class="nav-link">
+      <div>
+        <div class="nav-label">下一篇</div>
+        
+        <div class="nav-title">时空勇士 Live a Live 通关评测 </div>
+        
+      </div>
+      <i class="iconfont icon-right nav-next-icon"></i>
+    </a>
+  </div>
+  
+</div>
+
+<div class="card card-content toc-card" id="mobiletoc">
+  <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E4%BD%93%E9%AA%8C"><span class="toc-text">游戏体验</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9"><span class="toc-text">游戏内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%AD%A6%E5%99%A8%E7%B3%BB%E7%BB%9F"><span class="toc-text">武器系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%AD%94%E5%85%BD%E7%B3%BB%E7%BB%9F"><span class="toc-text">魔兽系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%81%93%E5%85%B7%E4%B8%8E%E6%94%B6%E9%9B%86"><span class="toc-text">道具与收集</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%96%87%E6%AC%A7%E6%8B%89"><span class="toc-text">薇欧拉</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%89%A7%E6%83%85"><span class="toc-text">关于剧情</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+</div></main>
+          <aside class="left-column">
+            
+            <div class="card card-author">
+              
+<img src="/images/003.gif" class="author-img">
+
+<p class="author-name">Foolish攀</p>
+<p class="author-description">靠谱的中年技术宅男</p>
+<div class="author-message">
+  <a class="author-posts-count" href="/archives">
+    <span>22</span>
+    <span>文章</span>
+  </a>
+  <a class="author-categories-count" href="/categories">
+    <span>1</span>
+    <span>分类</span>
+  </a>
+  <a class="author-tags-count" href="/tags">
+    <span>21</span>
+    <span>标签</span>
+  </a>
+</div>
+
+            </div>
+            
+            <div class="sticky-tablet">
+  
+  
+  <article class="display-when-two-columns spacer">
+    <div class="card card-content toc-card">
+      <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E4%BD%93%E9%AA%8C"><span class="toc-text">游戏体验</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9"><span class="toc-text">游戏内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%AD%A6%E5%99%A8%E7%B3%BB%E7%BB%9F"><span class="toc-text">武器系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%AD%94%E5%85%BD%E7%B3%BB%E7%BB%9F"><span class="toc-text">魔兽系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%81%93%E5%85%B7%E4%B8%8E%E6%94%B6%E9%9B%86"><span class="toc-text">道具与收集</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%96%87%E6%AC%A7%E6%8B%89"><span class="toc-text">薇欧拉</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%89%A7%E6%83%85"><span class="toc-text">关于剧情</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+    </div>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="categories-card">
+  <div class="categories-header"><i class="iconfont icon-fenlei" style="padding-right: 2px;"></i>分类</div>
+  <div class="categories-list">
+    
+      <a href="/categories/游戏">
+        <div class="categories-list-item">
+          游戏
+          <span class="categories-list-item-badge">22</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content">
+    <div class="tags-card">
+  <div class="tags-header"><i class="iconfont icon-biaoqian" style="padding-right: 2px;"></i>热门标签</div>
+  <div class="tags-list">
+    
+    <a href="\tags\评测" title="评测"><div class="tags-list-item">评测</div></a>
+    
+    <a href="\tags\Switch" title="Switch"><div class="tags-list-item">Switch</div></a>
+    
+    <a href="\tags\PC" title="PC"><div class="tags-list-item">PC</div></a>
+    
+    <a href="\tags\银河城" title="银河城"><div class="tags-list-item">银河城</div></a>
+    
+    <a href="\tags\马里奥" title="马里奥"><div class="tags-list-item">马里奥</div></a>
+    
+    <a href="\tags\黑神话" title="黑神话"><div class="tags-list-item">黑神话</div></a>
+    
+    <a href="\tags\国产" title="国产"><div class="tags-list-item">国产</div></a>
+    
+    <a href="\tags\像素" title="像素"><div class="tags-list-item">像素</div></a>
+    
+    <a href="\tags\传说系列" title="传说系列"><div class="tags-list-item">传说系列</div></a>
+    
+    <a href="\tags\聚会" title="聚会"><div class="tags-list-item">聚会</div></a>
+    
+    <a href="\tags\火纹" title="火纹"><div class="tags-list-item">火纹</div></a>
+    
+    <a href="\tags\无双" title="无双"><div class="tags-list-item">无双</div></a>
+    
+    <a href="\tags\塞尔达" title="塞尔达"><div class="tags-list-item">塞尔达</div></a>
+    
+    <a href="\tags\卡比" title="卡比"><div class="tags-list-item">卡比</div></a>
+    
+    <a href="\tags\战神" title="战神"><div class="tags-list-item">战神</div></a>
+    
+    <a href="\tags\PS4" title="PS4"><div class="tags-list-item">PS4</div></a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+          <aside class="right-column">
+            <div class="sticky-widescreen">
+  
+  
+  <article class="card card-content toc-card">
+    <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>目录</div>
+<ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E4%BD%93%E9%AA%8C"><span class="toc-text">游戏体验</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9"><span class="toc-text">游戏内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%AD%A6%E5%99%A8%E7%B3%BB%E7%BB%9F"><span class="toc-text">武器系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%AD%94%E5%85%BD%E7%B3%BB%E7%BB%9F"><span class="toc-text">魔兽系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%81%93%E5%85%B7%E4%B8%8E%E6%94%B6%E9%9B%86"><span class="toc-text">道具与收集</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%96%87%E6%AC%A7%E6%8B%89"><span class="toc-text">薇欧拉</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%89%A7%E6%83%85"><span class="toc-text">关于剧情</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header"><i class="iconfont icon-wenzhang_huaban" style="padding-right: 2px;"></i>最近文章</div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2024-09-01</div>
+        <a href="/posts/34123/"><div class="recent-posts-item-content">黑神话:悟空 通关+全成就 无剧透评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-05-29</div>
+        <a href="/posts/26312/"><div class="recent-posts-item-content">塞尔达传说：王国之泪 无剧透评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-01-30</div>
+        <a href="/posts/1919/"><div class="recent-posts-item-content">火焰纹章：结合 通关评测</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2022-11-27</div>
+        <a href="/posts/54965/"><div class="recent-posts-item-content">战神：诸神黄昏 白金通关评测</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>Copyright ©
+          
+          2020 -
+          
+          2024
+        </span>
+        <a href="/" class="footer-link">攀叔的万事屋 </a>
+      </div>
+    </div>
+
+    
+    <div class="footer-dsc">
+      
+      
+      Powered by
+      <a href="https://hexo.io/" class="footer-link" target="_blank" rel="nofollow noopener noreferrer">&nbsp;Hexo </a>
+      
+      
+      <span>&nbsp;|&nbsp;</span>
+      
+      
+      
+      Theme -
+      <a href="https://github.com/theme-kaze" class="footer-link" target="_blank"
+        rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
+      
+    </div>
+    
+    
+    
+    
+</footer>
+  <a role="button" id="scrollbutton" class="basebutton" >
+  <i class="iconfont icon-arrowleft button-icon"></i>
+</a>
+<a role="button" id="menubutton" class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a role="button" id="popbutton" class="basebutton">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a role="button" id="darkbutton" class="basebutton darkwidget">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+
+  
+  
+  
+  <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img');
+    var i;
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a');
+      wrapper.setAttribute('data-fslightbox', 'gallery');
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'));
+      wrapper.setAttribute('style', 'width: 100%; display: flex; justify-content: center;');
+      img[i].parentElement.insertBefore(wrapper, img[i]);
+      wrapper.appendChild(img[i]);
+    }
+    refreshFsLightbox();
+  }
+</script>
+<script>loadScript("//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js", addImgLayout)</script>
+  
+  
+  
+<script src="/js/main.js"></script>
+
+  
+  
+  <script>
+    var addLazyload = function () {
+      var observer = lozad('.lozad', {
+        load: function (el) {
+          el.srcset = el.getAttribute('data-src');
+        },
+        loaded: function (el) {
+          el.classList.add('loaded');
+        }
+      });
+      observer.observe();
+    }
+  </script>
+  <script>loadScript("/js/lib/lozad.min.js", addLazyload)</script>
+  
+  
+</body>
+
+</html>
